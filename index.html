@@ -4,377 +4,507 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teknik Informatika - Universitas Sam Ratulangi</title>
-    <meta
-      name="description"
-      content="Website resmi Program Studi Teknik Informatika Universitas Sam Ratulangi"
-    />
+    <meta name="description" content="Website resmi Program Studi Teknik Informatika Universitas Sam Ratulangi" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <div class="min-h-screen d-flex flex-column">
-      <!-- Navbar -->
-      <nav
-        class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow"
-      >
-        <div class="container">
-          <a href="/" class="navbar-brand d-flex align-items-center">
-            <span class="fs-4 fw-bold">Teknik Informatika</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="/" class="nav-link active">
-                  <i class="bi bi-house-door d-none d-md-inline me-1"></i>
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/profil" class="nav-link">
-                  <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
-                  Profil
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/akademik" class="nav-link">
-                  <i class="bi bi-book d-none d-md-inline me-1"></i>
-                  Akademik
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/fasilitas" class="nav-link">
-                  <i class="bi bi-laptop d-none d-md-inline me-1"></i>
-                  Fasilitas
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/kemahasiswaan" class="nav-link">
-                  <i class="bi bi-people d-none d-md-inline me-1"></i>
-                  Kemahasiswaan
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/lulusan" class="nav-link">
-                  <i class="bi bi-award d-none d-md-inline me-1"></i>
-                  Lulusan
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/dosen" class="nav-link">
-                  <i class="bi bi-person d-none d-md-inline me-1"></i>
-                  Dosen
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="/publikasi" class="nav-link">
-                  <i class="bi bi-file-text d-none d-md-inline me-1"></i>
-                  Publikasi
-                </a>
-              </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+      <div class="container">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HIMATEK Logo" class="d-inline-block align-top">
+          <span>HIMATEK UNSRAT</span>
+        </a>
+        
+        <button id="hamburgerMenu" class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/" class="nav-link active">
+                <i class="bi bi-house-door d-none d-md-inline me-1"></i>
+                Beranda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/profil" class="nav-link">
+                <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
+                Profil
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/kepengurusan" class="nav-link">
+                <i class="bi bi-people d-none d-md-inline me-1"></i>
+                Kepengurusan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/kegiatan" class="nav-link">
+                <i class="bi bi-calendar-event d-none d-md-inline me-1"></i>
+                Kegiatan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/prestasi" class="nav-link">
+                <i class="bi bi-trophy d-none d-md-inline me-1"></i>
+                Prestasi
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/galeri" class="nav-link">
+                <i class="bi bi-images d-none d-md-inline me-1"></i>
+                Galeri
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/kontak" class="nav-link">
+                <i class="bi bi-envelope d-none d-md-inline me-1"></i>
+                Kontak
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container text-center py-5">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HIMATEK Logo" class="hero-logo">
+        <h1 class="display-4 fw-bold mb-3">Himpunan Mahasiswa Elektro</h1>
+        <h2 class="h4 mb-4">Fakultas Teknik Universitas Sam Ratulangi</h2>
+        <p class="lead mb-4">Mewadahi aspirasi dan mengembangkan potensi mahasiswa Teknik Elektro</p>
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/profil" class="btn btn-light btn-lg px-4">Tentang Kami</a>
+          <a href="/kegiatan" class="btn btn-outline-light btn-lg px-4">Kegiatan</a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Announcement Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="alert alert-danger d-flex align-items-center p-4" role="alert">
+              <i class="bi bi-megaphone-fill fs-3 me-3"></i>
+              <div>
+                <h4 class="alert-heading">Pengumuman Penting!</h4>
+                <p class="mb-0">Pendaftaran Elektro Competition 2025 telah dibuka! Segera daftarkan tim kamu sebelum 30 April 2025.</p>
+                <a href="#" class="alert-link">Klik di sini untuk informasi lebih lanjut</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Bidang Kegiatan</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-red">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <h3 class="h4 mb-3">Akademik</h3>
+                <p class="card-text">Mengembangkan potensi akademik mahasiswa melalui seminar, workshop, dan kompetisi ilmiah.</p>
+                <a href="#" class="btn btn-outline-danger mt-3">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-blue">
+                  <i class="bi bi-lightbulb-fill"></i>
+                </div>
+                <h3 class="h4 mb-3">Riset & Inovasi</h3>
+                <p class="card-text">Mendorong pengembangan penelitian dan inovasi teknologi di bidang teknik elektro.</p>
+                <a href="#" class="btn btn-outline-primary mt-3">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 text-center">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-red">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h3 class="h4 mb-3">Pengabdian Masyarakat</h3>
+                <p class="card-text">Berkontribusi dalam pengembangan masyarakat melalui penerapan ilmu teknik elektro.</p>
+                <a href="#" class="btn btn-outline-danger mt-3">Selengkapnya</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Events Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Kegiatan Terbaru</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Workshop+Robotika" class="card-img-top" alt="Workshop Robotika">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Workshop</span>
+                  <small class="text-muted">15 Maret 2025</small>
+                </div>
+                <h5 class="card-title">Workshop Robotika</h5>
+                <p class="card-text">Workshop pemrograman dan pembuatan robot dengan Arduino untuk mahasiswa Teknik Elektro.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Seminar+Nasional" class="card-img-top" alt="Seminar Nasional">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-red">Seminar</span>
+                  <small class="text-muted">22 April 2025</small>
+                </div>
+                <h5 class="card-title">Seminar Nasional Energi Terbarukan</h5>
+                <p class="card-text">Seminar nasional membahas perkembangan dan implementasi energi terbarukan di Indonesia.</p>
+                <a href="#" class="btn btn-sm btn-outline-danger">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Kompetisi+Elektro" class="card-img-top" alt="Kompetisi Elektro">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Kompetisi</span>
+                  <small class="text-muted">10 Mei 2025</small>
+                </div>
+                <h5 class="card-title">Elektro Competition 2025</h5>
+                <p class="card-text">Kompetisi tahunan bidang teknik elektro tingkat nasional dengan berbagai kategori lomba.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="/kegiatan" class="btn btn-primary px-4">Lihat Semua Kegiatan</a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Achievement Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Prestasi Mahasiswa</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header bg-red">
+                <h5 class="mb-0">Prestasi Terbaru</h5>
+              </div>
+              <div class="card-body">
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-date">Februari 2025</div>
+                    <h5>Juara 1 Kompetisi Robot Nasional</h5>
+                    <p>Tim Robotika HIMATEK berhasil meraih juara 1 dalam Kompetisi Robot Nasional kategori Robot Pemadam Api.</p>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-date">Januari 2025</div>
+                    <h5>Best Paper Award di ICEEI 2025</h5>
+                    <p>Mahasiswa Teknik Elektro mendapatkan Best Paper Award dalam International Conference on Electrical Engineering and Informatics 2025.</p>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-date">November 2024</div>
+                    <h5>Finalis Lomba Karya Tulis Ilmiah</h5>
+                    <p>Tim HIMATEK menjadi finalis dalam Lomba Karya Tulis Ilmiah Nasional dengan tema "Inovasi Teknologi untuk Energi Terbarukan".</p>
+                  </div>
+                </div>
+                <a href="/prestasi" class="btn btn-outline-danger mt-3">Lihat Semua Prestasi</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card h-100">
+              <div class="card-header bg-blue">
+                <h5 class="mb-0">Galeri Prestasi</h5>
+              </div>
+              <div class="card-body">
+                <div id="achievementCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner rounded">
+                    <div class="carousel-item active">
+                      <img src="https://via.placeholder.com/800x500/0d47a1/ffffff?text=Prestasi+1" class="d-block w-100" alt="Prestasi 1">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Juara 1 Kompetisi Robot</h5>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://via.placeholder.com/800x500/c62828/ffffff?text=Prestasi+2" class="d-block w-100" alt="Prestasi 2">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Best Paper Award</h5>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <img src="https://via.placeholder.com/800x500/0d47a1/ffffff?text=Prestasi+3" class="d-block w-100" alt="Prestasi 3">
+                      <div class="carousel-caption d-none d-md-block">
+                        <h5>Finalis LKTI Nasional</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#achievementCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#achievementCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="text-center mt-3">
+                  <a href="/galeri" class="btn btn-outline-primary">Lihat Galeri Lengkap</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Testimonial Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Testimoni Alumni</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="card border-0 shadow">
+                    <div class="card-body p-5 text-center">
+                      <img src="https://via.placeholder.com/150/0d47a1/ffffff?text=A" class="rounded-circle mb-4" width="100" height="100" alt="Alumni 1">
+                      <p class="lead mb-4">"HIMATEK memberikan saya banyak pengalaman berharga dalam berorganisasi dan mengembangkan soft skill yang sangat berguna di dunia kerja."</p>
+                      <h5 class="mb-1">Budi Santoso</h5>
+                      <p class="text-muted">Alumni 2020, Software Engineer di PT Teknologi Indonesia</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card border-0 shadow">
+                    <div class="card-body p-5 text-center">
+                      <img src="https://via.placeholder.com/150/c62828/ffffff?text=B" class="rounded-circle mb-4" width="100" height="100" alt="Alumni 2">
+                      <p class="lead mb-4">"Kegiatan-kegiatan di HIMATEK membantu saya mengembangkan kemampuan teknis dan kepemimpinan yang menjadi bekal penting dalam karir saya."</p>
+                      <h5 class="mb-1">Siti Rahma</h5>
+                      <p class="text-muted">Alumni 2021, Electrical Engineer di PLN</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card border-0 shadow">
+                    <div class="card-body p-5 text-center">
+                      <img src="https://via.placeholder.com/150/0d47a1/ffffff?text=C" class="rounded-circle mb-4" width="100" height="100" alt="Alumni 3">
+                      <p class="lead mb-4">"Berkat pengalaman di HIMATEK, saya belajar banyak tentang manajemen proyek dan kerja tim yang sangat bermanfaat dalam pekerjaan saya sekarang."</p>
+                      <h5 class="mb-1">Andi Wijaya</h5>
+                      <p class="text-muted">Alumni 2019, Project Manager di Schneider Electric</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" class="btn btn-sm btn-outline-primary mx-2">
+                  <i class="bi bi-arrow-left"></i>
+                </button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" class="btn btn-sm btn-outline-primary mx-2">
+                  <i class="bi bi-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Partners Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Mitra Kerja Sama</h2>
+        <div class="row g-4 justify-content-center align-items-center">
+          <div class="col-md-2 col-4">
+            <img src="https://via.placeholder.com/200/0d47a1/ffffff?text=Partner+1" class="img-fluid" alt="Partner 1">
+          </div>
+          <div class="col-md-2 col-4">
+            <img src="https://via.placeholder.com/200/c62828/ffffff?text=Partner+2" class="img-fluid" alt="Partner 2">
+          </div>
+          <div class="col-md-2 col-4">
+            <img src="https://via.placeholder.com/200/0d47a1/ffffff?text=Partner+3" class="img-fluid" alt="Partner 3">
+          </div>
+          <div class="col-md-2 col-4">
+            <img src="https://via.placeholder.com/200/c62828/ffffff?text=Partner+4" class="img-fluid" alt="Partner 4">
+          </div>
+          <div class="col-md-2 col-4">
+            <img src="https://via.placeholder.com/200/0d47a1/ffffff?text=Partner+5" class="img-fluid" alt="Partner 5">
+          </div>  class="img-fluid" alt="Partner 5">
+          </div>
+          <div class="col-md-2 col-4">
+            <img src="https://via.placeholder.com/200/c62828/ffffff?text=Partner+6" class="img-fluid" alt="Partner 6">
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Contact Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow">
+              <div class="card-body p-4">
+                <h3 class="h4 mb-4">Kirim Pesan</h3>
+                <form>
+                  <div class="mb-3">
+                    <label for="name" class="form-label">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="name" placeholder="Masukkan nama lengkap">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="subject" class="form-label">Subjek</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Masukkan subjek pesan">
+                  </div>
+                  <div class="mb-3">
+                    <label for="message" class="form-label">Pesan</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Tulis pesan anda"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow">
+              <div class="card-body p-4">
+                <h3 class="h4 mb-4">Informasi Kontak</h3>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0">
+                    <div class="feature-icon bg-blue" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Alamat</h5>
+                    <p class="mb-0">Gedung Teknik Elektro, Fakultas Teknik<br>Universitas Sam Ratulangi<br>Jl. Kampus Unsrat, Manado, Sulawesi Utara</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0">
+                    <div class="feature-icon bg-red" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                      <i class="bi bi-envelope-fill"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Email</h5>
+                    <p class="mb-0">himatek@unsrat.ac.id<br>info.himatek@gmail.com</p>
+                  </div>
+                </div>
+                <div class="d-flex mb-4">
+                  <div class="flex-shrink-0">
+                    <div class="feature-icon bg-blue" style="width: 50px; height: 50px; font-size: 1.25rem;">
+                      <i class="bi bi-telephone-fill"></i>
+                    </div>
+                  </div>
+                  <div class="ms-3">
+                    <h5>Telepon</h5>
+                    <p class="mb-0">(0431) 123456<br>+62 812 3456 7890</p>
+                  </div>
+                </div>
+                <div class="mt-4">
+                  <h5>Jam Operasional Sekretariat</h5>
+                  <p>Senin - Jumat: 09.00 - 16.00 WITA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HIMATEK Logo" width="50" height="50" class="me-2">
+              <h5 class="mb-0">HIMATEK UNSRAT</h5>
+            </div>
+            <p>Himpunan Mahasiswa Teknik Elektro<br>Fakultas Teknik Universitas Sam Ratulangi</p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+              <a href="#"><i class="bi bi-youtube"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="mb-3">Tautan</h5>
+            <ul class="list-unstyled">
+              <li><a href="/">Beranda</a></li>
+              <li><a href="/profil">Profil</a></li>
+              <li><a href="/kepengurusan">Kepengurusan</a></li>
+              <li><a href="/kegiatan">Kegiatan</a></li>
+              <li><a href="/prestasi">Prestasi</a></li>
             </ul>
           </div>
-        </div>
-      </nav>
-
-      <!-- Hero Section -->
-      <div class="bg-primary text-white py-5 mb-4">
-        <div class="container py-4 text-center">
-          <h1 class="display-4 fw-bold">Teknik Informatika</h1>
-          <p class="lead mb-0">Informatics Engineering</p>
-          <div class="mt-4">
-            <button class="btn btn-light btn-lg me-2">Program Info</button>
-            <button class="btn btn-outline-light btn-lg">Contact Us</button>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="mb-3">Informasi</h5>
+            <ul class="list-unstyled">
+              <li><a href="/galeri">Galeri</a></li>
+              <li><a href="/berita">Berita</a></li>
+              <li><a href="/download">Download</a></li>
+              <li><a href="/faq">FAQ</a></li>
+              <li><a href="/kontak">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h5 class="mb-3">Berlangganan</h5>
+            <p>Dapatkan informasi terbaru dari HIMATEK</p>
+            <form class="mt-3">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email anda" aria-label="Email anda">
+                <button class="btn btn-danger" type="submit">Langganan</button>
+              </div>
+            </form>
           </div>
         </div>
-      </div>
-
-      <!-- Main Content -->
-      <div class="container py-4">
-        <div class="row g-4">
-          <!-- Left Column - Main Content -->
-          <div class="col-lg-8">
-            <div class="card shadow-sm h-100">
-              <div class="card-body">
-                <h2 class="card-title border-bottom pb-3 mb-4">
-                  Selamat datang di website resmi PSTI Unsrat
-                </h2>
-                <p class="card-text">
-                  Informasi terbaru mengenai akademik, kegiatan, dan publikasi
-                  Program Studi Teknik Informatika Universitas Sam Ratulangi.
-                </p>
-
-                <div class="row mt-5">
-                  <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm text-center">
-                      <div class="card-body">
-                        <div
-                          class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-3"
-                        >
-                          <i class="bi bi-book fs-4"></i>
-                        </div>
-                        <h5 class="card-title">Program Akademik</h5>
-                        <p class="card-text">
-                          Informasi kurikulum, mata kuliah, dan proses
-                          pembelajaran.
-                        </p>
-                        <a href="/akademik" class="btn btn-sm btn-primary"
-                          >Selengkapnya</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm text-center">
-                      <div class="card-body">
-                        <div
-                          class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-3"
-                        >
-                          <i class="bi bi-people fs-4"></i>
-                        </div>
-                        <h5 class="card-title">Kemahasiswaan</h5>
-                        <p class="card-text">
-                          Kegiatan, organisasi, dan prestasi mahasiswa.
-                        </p>
-                        <a href="/kemahasiswaan" class="btn btn-sm btn-primary"
-                          >Selengkapnya</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-4 mb-4">
-                    <div class="card h-100 border-0 shadow-sm text-center">
-                      <div class="card-body">
-                        <div
-                          class="rounded-circle bg-primary text-white d-inline-flex p-3 mb-3"
-                        >
-                          <i class="bi bi-laptop fs-4"></i>
-                        </div>
-                        <h5 class="card-title">Fasilitas</h5>
-                        <p class="card-text">
-                          Laboratorium, perpustakaan, dan fasilitas pendukung.
-                        </p>
-                        <a href="/fasilitas" class="btn btn-sm btn-primary"
-                          >Selengkapnya</a
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="mt-4">
-                  <h3 class="border-bottom pb-2 mb-3">Berita Terbaru</h3>
-                  <div class="card mb-3 border-0 shadow-sm">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img
-                          src="assets/image/fox.jpg"
-                          class="img-fluid rounded-start"
-                          alt="News image"
-                        />
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Fox Smiling ^W^</h5>
-                          <p class="card-text">
-                            This is a a news aboout a fox smiling.
-                          </p>
-                          <p class="card-text">
-                            <small class="text-muted"
-                              >Last updated 3 days ago</small
-                            >
-                          </p>
-                          <a href="#" class="btn btn-sm btn-outline-primary"
-                            >Baca selengkapnya</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="card mb-3 border-0 shadow-sm">
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="assets/image/fox.jpg" class="img-fluid rounded-start" alt="News image"/>
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h5 class="card-title">Fox Smiling ^W^</h5>
-                          <p class="card-text">
-                            This is a a news aboout a fox smiling.
-                          </p>
-                          <p class="card-text">
-                            <small class="text-muted">Last updated 1 week ago</small>
-                          </p>
-                          <a href="#" class="btn btn-sm btn-outline-primary">Baca selengkapnya</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <hr class="my-4 bg-light opacity-25">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 HIMATEK UNSRAT. All rights reserved.</p>
           </div>
-
-          <!-- Right Column - Sidebar -->
-          <div class="col-lg-4">
-            <div class="card shadow-sm mb-4">
-              <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">Publikasi Terbaru</h5>
-              </div>
-              <div class="card-body">
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item d-flex align-items-center border-0 px-0">
-                    <i class="bi bi-calendar text-primary me-2"></i>
-                    <a href="#" class="text-decoration-none">Jadwal Kuliah Semester Genap 2024 - 2025</a>
-                  </li>
-                  <li class="list-group-item d-flex align-items-center border-0 px-0">
-                    <i class="bi bi-calendar text-primary me-2"></i>
-                    <a href="#" class="text-decoration-none">Info Kuliah Semester Ganjil 2024 - 2025</a>
-                  </li>
-                  <li class="list-group-item d-flex align-items-center border-0 px-0">
-                    <i class="bi bi-journal-text text-primary me-2"></i>
-                    <a href="#" class="text-decoration-none">Panduan Tugas Akhir 2024</a>
-                  </li>
-                  <li class="list-group-item d-flex align-items-center border-0 px-0">
-                    <i class="bi bi-file-text text-primary me-2"></i>
-                    <a href="#" class="text-decoration-none">Jurnal Teknik Informatika Vol. 12</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="card shadow-sm mb-4">
-              <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">Kalender Akademik</h5>
-              </div>
-              <div class="card-body">
-                <div class="list-group">
-                  <div class="list-group-item border-0 px-0">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1">Pendaftaran Semester Baru</h6>
-                      <small class="text-muted">1-15 Mar</small>
-                    </div>
-                    <small class="text-muted"
-                      >Pendaftaran mata kuliah semester genap</small
-                    >
-                  </div>
-                  <div class="list-group-item border-0 px-0">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1">Ujian Tengah Semester</h6>
-                      <small class="text-muted">10-20 Apr</small>
-                    </div>
-                    <small class="text-muted">Jadwal UTS semester genap</small>
-                  </div>
-                  <div class="list-group-item border-0 px-0">
-                    <div class="d-flex w-100 justify-content-between">
-                      <h6 class="mb-1">Ujian Akhir Semester</h6>
-                      <small class="text-muted">15-30 Jun</small>
-                    </div>
-                    <small class="text-muted">Jadwal UAS semester genap</small>
-                  </div>
-                </div>
-                <a
-                  href="/akademik/kalender"
-                  class="btn btn-outline-primary btn-sm mt-3 w-100"
-                  >Lihat Kalender Lengkap</a
-                >
-              </div>
-            </div>
-
-            <div class="card shadow-sm">
-              <div class="card-header bg-primary text-white">
-                <h5 class="mb-0">Kontak</h5>
-              </div>
-              <div class="card-body">
-                <address class="mb-0">
-                  <strong>Program Studi Teknik Informatika</strong><br />
-                  Fakultas Teknik<br />
-                  Universitas Sam Ratulangi<br />
-                  Manado, Sulawesi Utara<br /><br />
-                  <i class="bi bi-envelope me-2"></i> info@ti.unsrat.ac.id<br />
-                  <i class="bi bi-telephone me-2"></i> (0431) 123456
-                </address>
-              </div>
-            </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">Designed with <i class="bi bi-heart-fill text-danger"></i> by HIMATEK IT Team</p>
           </div>
         </div>
       </div>
-
-      <!-- Footer -->
-      <footer class="bg-dark text-white mt-auto py-4">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6">
-              <h5>Teknik Informatika</h5>
-              <p class="mb-0">
-                Program Studi Teknik Informatika<br />Universitas Sam Ratulangi
-              </p>
-            </div>
-            <div class="col-md-3">
-              <h5>Links</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="/" class="text-white text-decoration-none">Home</a>
-                </li>
-                <li>
-                  <a href="/akademik" class="text-white text-decoration-none"
-                    >Akademik</a
-                  >
-                </li>
-                <li>
-                  <a href="/publikasi" class="text-white text-decoration-none"
-                    >Publikasi</a
-                  >
-                </li>
-                <li>
-                  <a href="/kontak" class="text-white text-decoration-none"
-                    >Kontak</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>Follow Us</h5>
-              <div class="d-flex gap-2">
-                <a href="#" class="text-white">
-                  <i class="bi bi-facebook fs-5"></i>
-                </a>
-                <a href="#" class="text-white">
-                  <i class="bi bi-twitter fs-5"></i>
-                </a>
-                <a href="#" class="text-white">
-                  <i class="bi bi-instagram fs-5"></i>
-                </a>
-                <a href="#" class="text-white">
-                  <i class="bi bi-youtube fs-5"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <hr class="my-3" />
-          <div class="text-center">
-            <small
-              >&copy; 2025 Program Studi Teknik Informatika Unsrat. All rights
-              reserved.</small
-            >
-          </div>
-        </div>
-      </footer>
-    </div>
-
-
+    </footer>
   </body>
-  <script src="js/scripts.js"></script>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts.js"></script>
 </html>
