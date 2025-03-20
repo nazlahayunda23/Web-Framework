@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak - HME Universitas Sam Ratulangi</title>
+    <meta name="description" content="Hubungi Himpunan Mahasiswa Teknik Elektro Universitas Sam Ratulangi" />
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    
+    <style>
+      /* Additional Contact Page Styles */
+      .hero-contact {
+        background: linear-gradient(rgba(13, 71, 161, 0.9), rgba(13, 71, 161, 0.9)), url('https://via.placeholder.com/1200x400');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 5rem 0;
+      }
+      
+      .contact-info-card {
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        overflow: hidden;
+        height: 100%;
+      }
+      
+      .contact-info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      
+      .contact-icon {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(13, 71, 161, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        color: #0d47a1;
+        font-size: 1.5rem;
+      }
+      
+      .map-container {
+        height: 400px;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .section-title {
+        position: relative;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1rem;
+      }
+      
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(to right, #0d47a1, #1976d2);
+      }
+      
+      .accordion-button:not(.collapsed) {
+        background-color: rgba(13, 71, 161, 0.1);
+        color: #0d47a1;
+      }
+      
+      .accordion-button:focus {
+        box-shadow: 0 0 0 0.25rem rgba(13, 71, 161, 0.25);
+      }
+      
+      .social-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #0d47a1;
+        color: white;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icon:hover {
+        background-color: #1976d2;
+        transform: translateY(-3px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow" style="background-color: #0d47a1;">
+      <div class="container">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" class="d-inline-block align-top" width="40" height="40">
+          <span class="ms-2">HME UNSRAT</span>
+        </a>
+        
+        <button id="hamburgerMenu" class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">
+                <i class="bi bi-house-door d-none d-md-inline me-1"></i>
+                Beranda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="profil.html" class="nav-link">
+                <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
+                Profil
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="kepengurusan.html" class="nav-link">
+                <i class="bi bi-people d-none d-md-inline me-1"></i>
+                Kepengurusan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="kegiatan.html" class="nav-link">
+                <i class="bi bi-calendar-event d-none d-md-inline me-1"></i>
+                Kegiatan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="prestasi.html" class="nav-link">
+                <i class="bi bi-trophy d-none d-md-inline me-1"></i>
+                Prestasi
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="galeri.html" class="nav-link">
+                <i class="bi bi-images d-none d-md-inline me-1"></i>
+                Galeri
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="kontak.html" class="nav-link active">
+                <i class="bi bi-envelope d-none d-md-inline me-1"></i>
+                Kontak
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Hero Section -->
+    <section class="hero-contact text-center">
+      <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Hubungi Kami</h1>
+        <p class="lead mb-0">Silahkan hubungi kami untuk informasi lebih lanjut tentang HME UNSRAT</p>
+      </div>
+    </section>
+  
+    <!-- Contact Info Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Address -->
+          <div class="col-md-4">
+            <div class="card h-100 contact-info-card text-center p-4">
+              <div class="card-body">
+                <div class="contact-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <h4 class="card-title">Alamat</h4>
+                <p class="card-text">
+                  Fakultas Teknik Universitas Sam Ratulangi<br>
+                  Jl. Kampus Unsrat, Bahu, Kec. Malalayang<br>
+                  Kota Manado, Sulawesi Utara 95115
+                </p>
+                <a href="https://maps.google.com/?q=Fakultas+Teknik+Universitas+Sam+Ratulangi" target="_blank" class="btn btn-outline-primary mt-2">
+                  <i class="bi bi-map me-2"></i>Lihat di Peta
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Email -->
+          <div class="col-md-4">
+            <div class="card h-100 contact-info-card text-center p-4">
+              <div class="card-body">
+                <div class="contact-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <h4 class="card-title">Email</h4>
+                <p class="card-text">
+                  Untuk informasi umum:<br>
+                  <a href="mailto:info@HMEusr.ac.id" class="text-decoration-none">info@HMEusr.ac.id</a><br><br>
+                  Untuk kerjasama:<br>
+                  <a href="mailto:kerjasama@HMEusr.ac.id" class="text-decoration-none">kerjasama@HMEusr.ac.id</a>
+                </p>
+                <a href="mailto:info@HMEusr.ac.id" class="btn btn-outline-primary mt-2">
+                  <i class="bi bi-envelope me-2"></i>Kirim Email
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Phone -->
+          <div class="col-md-4">
+            <div class="card h-100 contact-info-card text-center p-4">
+              <div class="card-body">
+                <div class="contact-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <h4 class="card-title">Telepon</h4>
+                <p class="card-text">
+                  Sekretariat HME:<br>
+                  <a href="tel:+62431123456" class="text-decoration-none">+62 431 123456</a><br><br>
+                  Ketua HME:<br>
+                  <a href="tel:+6285123456789" class="text-decoration-none">+62 851 2345 6789</a>
+                </p>
+                <a href="tel:+62431123456" class="btn btn-outline-primary mt-2">
+                  <i class="bi bi-telephone me-2"></i>Hubungi Kami
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Kirim Pesan</h2>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 p-md-5">
+                <form id="contactForm">
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="nameInput" placeholder="Nama Lengkap" required>
+                        <label for="nameInput">Nama Lengkap</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="emailInput" placeholder="Email" required>
+                        <label for="emailInput">Email</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="phoneInput" placeholder="Nomor Telepon">
+                        <label for="phoneInput">Nomor Telepon</label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating mb-3">
+                        <select class="form-select" id="subjectSelect" aria-label="Pilih Subjek">
+                          <option selected disabled value="">Pilih Subjek</option>
+                          <option value="informasi">Informasi Umum</option>
+                          <option value="kerjasama">Kerjasama</option>
+                          <option value="kegiatan">Kegiatan</option>
+                          <option value="lainnya">Lainnya</option>
+                        </select>
+                        <label for="subjectSelect">Subjek</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-floating mb-3">
+                        <textarea class="form-control" id="messageTextarea" placeholder="Pesan" style="height: 150px" required></textarea>
+                        <label for="messageTextarea">Pesan</label>
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="privacyCheck" required>
+                        <label class="form-check-label" for="privacyCheck">
+                          Saya menyetujui <a href="#" class="text-decoration-none">kebijakan privasi</a> HME UNSRAT
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-primary btn-lg px-5">
+                        <i class="bi bi-send me-2"></i>Kirim Pesan
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Lokasi Kami</h2>
+        
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="map-container shadow">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5722429543716!2d124.83773731475403!3d1.4592993989334837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32877a5732570adf%3A0xab9c8f37f0d86ea!2sFakultas%20Teknik%20Universitas%20Sam%20Ratulangi!5e0!3m2!1sid!2sid!4v1616569732985!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="row mt-4 g-4">
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body p-4">
+                    <h5 class="card-title"><i class="bi bi-signpost-2 me-2 text-primary"></i>Petunjuk Arah</h5>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item border-0 ps-0">
+                        <i class="bi bi-airplane me-2 text-primary"></i>
+                        <strong>Dari Bandara Sam Ratulangi:</strong> 30 menit berkendara (13 km)
+                      </li>
+                      <li class="list-group-item border-0 ps-0">
+                        <i class="bi bi-building me-2 text-primary"></i>
+                        <strong>Dari Pusat Kota Manado:</strong> 15 menit berkendara (5 km)
+                      </li>
+                      <li class="list-group-item border-0 ps-0">
+                        <i class="bi bi-bus-front me-2 text-primary"></i>
+                        <strong>Transportasi Umum:</strong> Tersedia angkutan umum dan ojek online
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                  <div class="card-body p-4">
+                    <h5 class="card-title"><i class="bi bi-clock me-2 text-primary"></i>Jam Operasional</h5>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item border-0 ps-0 d-flex justify-content-between">
+                        <span><i class="bi bi-calendar-date me-2 text-primary"></i><strong>Senin - Jumat</strong></span>
+                        <span>08:00 - 16:00 WITA</span>
+                      </li>
+                      <li class="list-group-item border-0 ps-0 d-flex justify-content-between">
+                        <span><i class="bi bi-calendar-date me-2 text-primary"></i><strong>Sabtu</strong></span>
+                        <span>09:00 - 13:00 WITA</span>
+                      </li>
+                      <li class="list-group-item border-0 ps-0 d-flex justify-content-between">
+                        <span><i class="bi bi-calendar-date me-2 text-primary"></i><strong>Minggu & Hari Libur</strong></span>
+                        <span>Tutup</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Social Media Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Media Sosial</h2>
+        
+        <div class="row g-4">
+          <div class="col-lg-8 mx-auto">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 text-center">
+                <p class="lead mb-4">Ikuti kami di media sosial untuk mendapatkan informasi terbaru tentang kegiatan HME UNSRAT</p>
+                
+                <div class="d-flex justify-content-center flex-wrap gap-3">
+                  <a href="https://facebook.com/HMEusr" target="_blank" class="text-decoration-none">
+                    <div class="social-icon">
+                      <i class="bi bi-facebook"></i>
+                    </div>
+                    <span class="ms-2">Facebook</span>
+                  </a>
+                  
+                  <a href="https://instagram.com/HMEusr" target="_blank" class="text-decoration-none">
+                    <div class="social-icon">
+                      <i class="bi bi-instagram"></i>
+                    </div>
+                    <span class="ms-2">Instagram</span>
+                  </a>
+                  
+                  <a href="https://twitter.com/HMEusr" target="_blank" class="text-decoration-none">
+                    <div class="social-icon">
+                      <i class="bi bi-twitter"></i>
+                    </div>
+                    <span class="ms-2">Twitter</span>
+                  </a>
+                  
+                  <a href="https://youtube.com/HMEusr" target="_blank" class="text-decoration-none">
+                    <div class="social-icon">
+                      <i class="bi bi-youtube"></i>
+                    </div>
+                    <span class="ms-2">YouTube</span>
+                  </a>
+                  
+                  <a href="https://linkedin.com/company/HMEusr" target="_blank" class="text-decoration-none">
+                    <div class="social-icon">
+                      <i class="bi bi-linkedin"></i>
+                    </div>
+                    <span class="ms-2">LinkedIn</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Pertanyaan Umum</h2>
+        
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="accordion" id="faqAccordion">
+              <!-- FAQ Item 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Bagaimana cara bergabung dengan HME UNSRAT?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Untuk bergabung dengan HME UNSRAT, Anda harus terdaftar sebagai mahasiswa aktif Jurusan Teknik Elektro Universitas Sam Ratulangi. Setiap mahasiswa Teknik Elektro secara otomatis menjadi anggota HME. Untuk bergabung dalam kepengurusan, Anda dapat mengikuti proses rekrutmen yang biasanya diadakan setiap awal periode kepengurusan baru.
+                  </div>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Apa saja kegiatan rutin yang diadakan oleh HME?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    HME UNSRAT mengadakan berbagai kegiatan rutin seperti seminar teknik elektro, workshop keterampilan teknis, kompetisi robotika, kunjungan industri, pengabdian masyarakat, dan kegiatan sosial lainnya. Kami juga menyelenggarakan Elektro Competition yang merupakan kompetisi tahunan tingkat nasional dalam bidang teknik elektro.
+                  </div>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Bagaimana cara mengajukan kerjasama dengan HME?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Untuk mengajukan kerjasama dengan HME UNSRAT, Anda dapat mengirimkan proposal kerjasama ke email kerjasama@HMEusr.ac.id atau menghubungi kami melalui formulir kontak di website ini. Tim kami akan meninjau proposal tersebut dan menghubungi Anda untuk diskusi lebih lanjut mengenai potensi kerjasama.
+                  </div>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Apakah HME menyediakan bantuan untuk mahasiswa?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Ya, HME UNSRAT menyediakan berbagai bentuk bantuan untuk mahasiswa Teknik Elektro, seperti bimbingan akademik, pelatihan keterampilan teknis, informasi beasiswa, dan kesempatan magang. Kami juga memiliki program mentoring untuk mahasiswa baru dan program persiapan karir untuk mahasiswa tingkat akhir.
+                  </div>
+                </div>
+              </div>
+              
+              <!-- FAQ Item 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Bagaimana cara mendapatkan merchandise HME?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Merchandise HME UNSRAT seperti kaos, jaket, dan aksesoris lainnya dapat dibeli melalui sekretariat HME di Fakultas Teknik UNSRAT. Kami juga kadang membuka pre-order merchandise melalui media sosial resmi kami. Untuk informasi lebih lanjut, silakan hubungi kami melalui email atau media sosial.
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <p>Masih punya pertanyaan lain? Jangan ragu untuk menghubungi kami.</p>
+              <a href="#contactForm" class="btn btn-primary">
+                <i class="bi bi-chat-dots me-2"></i>Tanyakan Sekarang
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer style="background-color: #0d47a1; color: white;">
+      <div class="container">
+        <div class="row g-4 py-5">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" width="50" height="50" class="me-2">
+              <h5 class="mb-0">HME UNSRAT</h5>
+            </div>
+            <p>Himpunan Mahasiswa Teknik Elektro<br>Fakultas Teknik Universitas Sam Ratulangi</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="mb-3">Tautan</h5>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white text-decoration-none mb-2 d-inline-block">Beranda</a></li>
+              <li><a href="profil.html" class="text-white text-decoration-none mb-2 d-inline-block">Profil</a></li>
+              <li><a href="kepengurusan.html" class="text-white text-decoration-none mb-2 d-inline-block">Kepengurusan</a></li>
+              <li><a href="kegiatan.html" class="text-white text-decoration-none mb-2 d-inline-block">Kegiatan</a></li>
+              <li><a href="prestasi.html" class="text-white text-decoration-none mb-2 d-inline-block">Prestasi</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="mb-3">Informasi</h5>
+            <ul class="list-unstyled">
+              <li><a href="galeri.html" class="text-white text-decoration-none mb-2 d-inline-block">Galeri</a></li>
+              <li>  class="text-white text-decoration-none mb-2 d-inline-block">Galeri</a></li>
+              <li><a href="berita.html" class="text-white text-decoration-none mb-2 d-inline-block">Berita</a></li>
+              <li><a href="download.html" class="text-white text-decoration-none mb-2 d-inline-block">Download</a></li>
+              <li><a href="faq.html" class="text-white text-decoration-none mb-2 d-inline-block">FAQ</a></li>
+              <li><a href="kontak.html" class="text-white text-decoration-none mb-2 d-inline-block">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h5 class="mb-3">Berlangganan</h5>
+            <p>Dapatkan informasi terbaru dari HME</p>
+            <form class="mt-3">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email anda" aria-label="Email anda">
+                <button class="btn btn-danger" type="submit">Langganan</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr class="my-4 bg-light opacity-25">
+        <div class="row pb-4">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 HME UNSRAT. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">Designed with <i class="bi bi-heart-fill text-danger"></i> by HME IT Team</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Contact Form Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        
+        if (contactForm) {
+          contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            const phone = document.getElementById('phoneInput').value;
+            const subject = document.getElementById('subjectSelect').value;
+            const message = document.getElementById('messageTextarea').value;
+            
+            // Here you would typically send the form data to a server
+            // For demonstration, we'll just show an alert
+            alert(`Terima kasih ${name}! Pesan Anda telah dikirim. Kami akan menghubungi Anda segera.`);
+            
+            // Reset form
+            contactForm.reset();
+          });
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
