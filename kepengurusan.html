@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kepengurusan - Himpunan Mahasiswa Elektro UNSRAT</title>
+  <meta name="description" content="Struktur kepengurusan Himpunan Mahasiswa Elektro Universitas Sam Ratulangi" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    :root {
+      --primary-color: #0d47a1;
+      --secondary-color: #c62828;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+    
+    .navbar {
+      background-color: var(--primary-color);
+    }
+    
+    .navbar-brand span {
+      font-weight: 600;
+      margin-left: 10px;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: #fff;
+    }
+    
+    .section-title {
+      position: relative;
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-weight: 700;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: var(--primary-color);
+    }
+    
+    .page-header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 4rem 0;
+      position: relative;
+    }
+    
+    .page-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='white' fill-opacity='1' d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .feature-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      color: white;
+      font-size: 1.75rem;
+    }
+    
+    .bg-red {
+      background-color: var(--secondary-color);
+    }
+    
+    .bg-blue {
+      background-color: var(--primary-color);
+    }
+    
+    .card {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 3rem 0 1.5rem;
+    }
+    
+    footer a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    footer a:hover {
+      color: white;
+    }
+    
+    .social-icons a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-right: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Specific styles for kepengurusan page */
+    .org-chart {
+      position: relative;
+      margin-bottom: 3rem;
+    }
+    
+    .org-level {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    
+    .org-level::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 2px;
+      height: 30px;
+      background-color: var(--primary-color);
+      transform: translateX(-50%);
+    }
+    
+    .org-level:last-child::after {
+      display: none;
+    }
+    
+    .org-box {
+      background-color: white;
+      border-radius: 10px;
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .org-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .org-box.primary {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .org-box.secondary {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+    
+    .org-connector {
+      position: absolute;
+      width: 2px;
+      background-color: var(--primary-color);
+    }
+    
+    .team-member-card {
+      height: 100%;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .team-member-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 5px solid #f8f9fa;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .team-member-social {
+      margin-top: 1rem;
+    }
+    
+    .team-member-social a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background-color: #f8f9fa;
+      border-radius: 50%;
+      margin: 0 0.25rem;
+      color: var(--primary-color);
+      transition: all 0.3s ease;
+    }
+    
+    .team-member-social a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .team-member-position {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .team-member-card.primary .team-member-position {
+      color: var(--secondary-color);
+    }
+    
+    .team-member-card.secondary .team-member-position {
+      color: var(--primary-color);
+    }
+    
+    .period-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+    
+    .nav-pills .nav-link {
+      color: #495057;
+      background-color: #f8f9fa;
+      border-radius: 30px;
+      margin: 0 0.25rem;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .nav-pills .nav-link.active {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .nav-pills .nav-link:hover:not(.active) {
+      background-color: #e9ecef;
+    }
+    
+    .division-card {
+      height: 100%;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .division-icon {
+      margin-bottom: 1.5rem;
+    }
+    
+    .division-members {
+      margin-top: 1rem;
+      text-align: left;
+    }
+    
+    .division-members ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .division-members li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f8f9fa;
+    }
+    
+    .division-members li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+    <div class="container">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" width="40" height="40" class="d-inline-block align-top">
+        <span>HME UNSRAT</span>
+      </a>
+      
+      <button id="hamburgerMenu" class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="hamburger-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="bi bi-house-door d-none d-md-inline me-1"></i>
+              Beranda
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="profil.html" class="nav-link">
+              <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
+              Profil
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="kepengurusan.html" class="nav-link active">
+              <i class="bi bi-people d-none d-md-inline me-1"></i>
+              Kepengurusan
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="kegiatan.html" class="nav-link">
+              <i class="bi bi-calendar-event d-none d-md-inline me-1"></i>
+              Kegiatan
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="prestasi.html" class="nav-link">
+              <i class="bi bi-trophy d-none d-md-inline me-1"></i>
+              Prestasi
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="galeri.html" class="nav-link">
+              <i class="bi bi-images d-none d-md-inline me-1"></i>
+              Galeri
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="kontak.html" class="nav-link">
+              <i class="bi bi-envelope d-none d-md-inline me-1"></i>
+              Kontak
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-3">Kepengurusan HME UNSRAT</h1>
+      <p class="lead mb-0">Struktur organisasi dan pengurus Himpunan Mahasiswa Elektro periode 2024-2025</p>
+    </div>
+  </header>
+
+  <!-- Period Selection -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h2 class="section-title">Periode Kepengurusan</h2>
+          <p class="mb-4">Pilih periode kepengurusan untuk melihat struktur organisasi dan pengurus HME UNSRAT</p>
+          <ul class="nav nav-pills justify-content-center mb-5" id="periodTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="period-2024-tab" data-bs-toggle="pill" data-bs-target="#period-2024" type="button" role="tab" aria-controls="period-2024" aria-selected="true">2024-2025</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="period-2023-tab" data-bs-toggle="pill" data-bs-target="#period-2023" type="button" role="tab" aria-controls="period-2023" aria-selected="false">2023-2024</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="period-2022-tab" data-bs-toggle="pill" data-bs-target="#period-2022" type="button" role="tab" aria-controls="period-2022" aria-selected="false">2022-2023</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organization Structure -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="tab-content" id="periodTabContent">
+        <!-- Period 2024-2025 -->
+        <div class="tab-pane fade show active" id="period-2024" role="tabpanel" aria-labelledby="period-2024-tab">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h2 class="section-title">Struktur Organisasi</h2>
+              <div class="period-badge">Periode 2024-2025</div>
+              
+              <div class="org-chart">
+                <!-- Level 1: Ketua -->
+                <div class="org-level">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6">
+                      <div class="org-box primary text-center">
+                        <h4 class="mb-0">Ketua HME</h4>
+                        <p class="mb-0">Lalisa Manoban</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Level 2: Wakil Ketua -->
+                <div class="org-level">
+                  <div class="row justify-content-center">
+                    <div class="col-md-6">
+                      <div class="org-box secondary text-center">
+                        <h4 class="mb-0">Wakil Ketua HME</h4>
+                        <p class="mb-0">Kim Jennie</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Level 3: Sekretaris & Bendahara -->
+                <div class="org-level">
+                  <div class="row justify-content-center">
+                    <div class="col-md-5">
+                      <div class="org-box text-center">
+                        <h5 class="mb-0">Sekretaris</h5>
+                        <p class="mb-0">Kim Jisoo</p>
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="org-box text-center">
+                        <h5 class="mb-0">Bendahara</h5>
+                        <p class="mb-0">Park Chae Young</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Level 4: Koordinator Bidang -->
+                <div class="org-level">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <div class="org-box text-center">
+                        <h6 class="mb-0">Bidang Akademik</h6>
+                        <p class="mb-0">Miracle Sumajow</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="org-box text-center">
+                        <h6 class="mb-0">Bidang Minat & Bakat</h6>
+                        <p class="mb-0">Misella Mambu</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="org-box text-center">
+                        <h6 class="mb-0">Bidang Humas</h6>
+                        <p class="mb-0">Nazlah Jacub</p>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="org-box text-center">
+                        <h6 class="mb-0">Bidang Pengabdian</h6>
+                        <p class="mb-0">Abraham Tumbel</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Pengurus Inti -->
+              <h3 class="h2 text-center mb-4 mt-5">Pengurus Inti</h3>
+              <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                  <div class="card team-member-card">
+                    <img src="https://via.placeholder.com/300x300/0d47a1/ffffff?text=BS" class="team-member-img" alt="Lalisa Manoban">
+                    <h4>Lalisa Manoban</h4>
+                    <p class="team-member-position">Ketua HME</p>
+                    <p class="small">Mahasiswa Teknik Elektro angkatan 2021 dengan fokus pada bidang Elektronika Daya. Aktif dalam berbagai kegiatan kemahasiswaan dan kompetisi robotika.</p>
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card team-member-card">
+                    <img src="https://via.placeholder.com/300x300/c62828/ffffff?text=SR" class="team-member-img" alt="Kim Jennie">
+                    <h4>Kim Jennie</h4>
+                    <p class="team-member-position">Wakil Ketua HME</p>
+                    <p class="small">Mahasiswa Teknik Elektro angkatan 2021 dengan minat pada bidang Telekomunikasi. Berpengalaman dalam organisasi dan manajemen kegiatan mahasiswa.</p>
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card team-member-card">
+                    <img src="https://via.placeholder.com/300x300/0d47a1/ffffff?text=AW" class="team-member-img" alt="Kim Jisoo">
+                    <h4>Kim Jisoo</h4>
+                    <p class="team-member-position">Sekretaris</p>
+                    <p class="small">Mahasiswa Teknik Elektro angkatan 2022 dengan keahlian dalam administrasi dan manajemen dokumen. Memiliki kemampuan komunikasi yang baik.</p>
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card team-member-card">
+                    <img src="https://via.placeholder.com/300x300/c62828/ffffff?text=DL" class="team-member-img" alt="Park Chae Young">
+                    <h4>Park Chae Young</h4>
+                    <p class="team-member-position">Bendahara</p>
+                    <p class="small">Mahasiswa Teknik Elektro angkatan 2022 dengan keahlian dalam manajemen keuangan. Teliti dan bertanggung jawab dalam pengelolaan dana organisasi.</p>
+                    <div class="team-member-social">
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                      <a href="#"><i class="bi bi-instagram"></i></a>
+                      <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Koordinator Bidang -->
+              <h3 class="h2 text-center mb-4 mt-5">Koordinator Bidang</h3>
+              <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                  <div class="card division-card">
+                    <div class="feature-icon bg-blue division-icon">
+                      <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <h4>Bidang Akademik</h4>
+                    <p class="small mb-3">Bertanggung jawab untuk meningkatkan kualitas akademik mahasiswa melalui berbagai program pendukung.</p>
+                    <div class="division-members">
+                      <h6>Anggota:</h6>
+                      <ul>
+                        <li><strong>Miracle Sumajow</strong> - Koordinator</li>
+                        <li>Daniel Sengkey - Wakil Koordinator</li>
+                        <li>Salvius Lengkong - Anggota</li>
+                        <li>Heilbert - Anggota</li>
+                        <li>Xaverius - Anggota</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card division-card">
+                    <div class="feature-icon bg-red division-icon">
+                      <i class="bi bi-stars"></i>
+                    </div>
+                    <h4>Bidang Minat & Bakat</h4>
+                    <p class="small mb-3">Fokus pada pengembangan minat dan bakat mahasiswa di luar kegiatan akademik.</p>
+                    <div class="division-members">
+                      <h6>Anggota:</h6>
+                      <ul>
+                        <li><strong>Misella Mambu</strong> - Koordinator</li>
+                        <li>Uttu - Motor Koordinator</li>
+                        <li>Park Jong Seong - Anggota</li>
+                        <li>Lee Jeno - Anggota</li>
+                        <li>Sim Jae Yun - Anggota</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card division-card">
+                    <div class="feature-icon bg-blue division-icon">
+                      <i class="bi bi-megaphone-fill"></i>
+                    </div>
+                    <h4>Bidang Humas</h4>
+                    <p class="small mb-3">Mengelola komunikasi dan hubungan dengan pihak internal maupun eksternal organisasi.</p>
+                    <div class="division-members">
+                      <h6>Anggota:</h6>
+                      <ul>
+                        <li><strong>Nazlah Jacub</strong> - Koordinator</li>
+                        <li>Kim Mingyu - Pacar Koordinator</li>
+                        <li>Do Kyungsoo - Cinta Kedua</li>
+                        <li>Dita Daun - Prend</li>
+                        <li>Greitha Pelealu - Prend juga</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card division-card">
+                    <div class="feature-icon bg-red division-icon">
+                      <i class="bi bi-heart-fill"></i>
+                    </div>
+                    <h4>Bidang Pengabdian</h4>
+                    <p class="small mb-3">Bertanggung jawab untuk kegiatan pengabdian masyarakat dan kontribusi sosial.</p>
+                    <div class="division-members">
+                      <h6>Anggota:</h6>
+                      <ul>
+                        <li><strong>Abraham Tumbel</strong> - Koordinator</li>
+                        <li>Bam p papa - Ayah Koordinator</li>
+                        <li>Bam p mama - Ibu</li>
+                        <li>Bam p cewe - Real Pacar</li>
+                        <li>Bam p cewe kedua - Adodo bam</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Period 2023-2024 -->
+        <div class="tab-pane fade" id="period-2023" role="tabpanel" aria-labelledby="period-2023-tab">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+              <h2 class="section-title">Struktur Organisasi</h2>
+              <div class="period-badge">Periode 2023-2024</div>
+              
+              <div class="alert alert-info p-4 mb-5">
+                <h4 class="alert-heading"><i class="bi bi-info-circle-fill me-2"></i>Informasi</h4>
+                <p class="mb-0">Data kepengurusan periode 2023-2024 sedang dalam proses pembaruan. Silakan kunjungi halaman ini kembali nanti atau hubungi sekretariat HME untuk informasi lebih lanjut.</p>
+              </div>
+              
+              <img src="https://via.placeholder.com/800x500/0d47a1/ffffff?text=Struktur+Organisasi+2023-2024" class="img-fluid rounded shadow" alt="Struktur Organisasi 2023-2024">  class="img-fluid rounded shadow" alt="Struktur Organisasi 2023-2024">
+            </div>
+          </div>
+        </div>
+        
+        <!-- Period 2022-2023 -->
+        <div class="tab-pane fade" id="period-2022" role="tabpanel" aria-labelledby="period-2022-tab">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+              <h2 class="section-title">Struktur Organisasi</h2>
+              <div class="period-badge">Periode 2022-2023</div>
+              
+              <div class="alert alert-info p-4 mb-5">
+                <h4 class="alert-heading"><i class="bi bi-info-circle-fill me-2"></i>Informasi</h4>
+                <p class="mb-0">Data kepengurusan periode 2022-2023 telah diarsipkan. Untuk melihat detail lengkap, silakan kunjungi halaman arsip atau hubungi sekretariat HME.</p>
+              </div>
+              
+              <img src="https://via.placeholder.com/800x500/c62828/ffffff?text=Struktur+Organisasi+2022-2023" class="img-fluid rounded shadow" alt="Struktur Organisasi 2022-2023">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Kerja -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="section-title">Program Kerja</h2>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card border-0 shadow mb-4">
+            <div class="card-body p-4">
+              <h3 class="h4 mb-3">Program Kerja Periode 2024-2025</h3>
+              <p>Berikut adalah program kerja utama HME UNSRAT untuk periode kepengurusan 2024-2025:</p>
+              
+              <div class="accordion mt-4" id="programKerjaAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <i class="bi bi-mortarboard-fill me-2 text-primary"></i> Bidang Akademik
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#programKerjaAccordion">
+                    <div class="accordion-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Study Club</h6>
+                            <p class="small mb-0">Program belajar bersama untuk meningkatkan pemahaman materi kuliah dan persiapan ujian.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Workshop Keterampilan Teknis</h6>
+                            <p class="small mb-0">Pelatihan keterampilan teknis seperti pemrograman mikrokontroler, desain PCB, dan penggunaan software teknik.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Seminar Teknologi</h6>
+                            <p class="small mb-0">Penyelenggaraan seminar dengan mengundang pakar dari industri dan akademisi untuk berbagi pengetahuan terkini.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Kompetisi Karya Ilmiah</h6>
+                            <p class="small mb-0">Mendorong mahasiswa untuk menghasilkan karya ilmiah dan mengikuti kompetisi di tingkat regional dan nasional.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <i class="bi bi-stars me-2 text-danger"></i> Bidang Minat & Bakat
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#programKerjaAccordion">
+                    <div class="accordion-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Competition</h6>
+                            <p class="small mb-0">Kompetisi tahunan yang mencakup berbagai kategori seperti robotika, IoT, dan inovasi teknologi.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Sport Championship</h6>
+                            <p class="small mb-0">Turnamen olahraga untuk mempererat hubungan antar mahasiswa Teknik Elektro.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Art & Culture</h6>
+                            <p class="small mb-0">Kegiatan seni dan budaya untuk mengembangkan kreativitas mahasiswa.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Talent Show</h6>
+                            <p class="small mb-0">Ajang untuk menampilkan bakat dan kreativitas mahasiswa Teknik Elektro.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <i class="bi bi-megaphone-fill me-2 text-primary"></i> Bidang Humas
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#programKerjaAccordion">
+                    <div class="accordion-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Career Day</h6>
+                            <p class="small mb-0">Kegiatan yang mempertemukan mahasiswa dengan perusahaan untuk kesempatan magang dan karir.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Kunjungan Industri</h6>
+                            <p class="small mb-0">Mengunjungi perusahaan dan industri yang relevan dengan bidang teknik elektro.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Media & Publikasi</h6>
+                            <p class="small mb-0">Pengelolaan media sosial, website, dan publikasi kegiatan HME UNSRAT.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Alumni Gathering</h6>
+                            <p class="small mb-0">Pertemuan dengan alumni untuk membangun jaringan dan berbagi pengalaman.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                      <i class="bi bi-heart-fill me-2 text-danger"></i> Bidang Pengabdian
+                    </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#programKerjaAccordion">
+                    <div class="accordion-body">
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Mengajar</h6>
+                            <p class="small mb-0">Program mengajar di sekolah-sekolah untuk mengenalkan ilmu teknik elektro kepada siswa.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Peduli</h6>
+                            <p class="small mb-0">Kegiatan sosial dan bantuan untuk masyarakat yang membutuhkan.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Teknologi untuk Desa</h6>
+                            <p class="small mb-0">Penerapan teknologi tepat guna untuk membantu masyarakat desa.</p>
+                          </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                          <i class="bi bi-check-circle-fill text-success me-2"></i>
+                          <div>
+                            <h6 class="mb-1">Elektro Go Green</h6>
+                            <p class="small mb-0">Program peduli lingkungan dan penerapan teknologi ramah lingkungan.</p>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeri Kegiatan -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Galeri Kegiatan</h2>
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Pelantikan+Pengurus" class="card-img-top" alt="Pelantikan Pengurus">
+            <div class="card-body">
+              <h5 class="card-title">Pelantikan Pengurus</h5>
+              <p class="card-text">Pelantikan pengurus HME UNSRAT periode 2024-2025 yang dihadiri oleh Dekan Fakultas Teknik.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <small class="text-muted">Januari 2024</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Rapat+Kerja" class="card-img-top" alt="Rapat Kerja">
+            <div class="card-body">
+              <h5 class="card-title">Rapat Kerja</h5>
+              <p class="card-text">Rapat kerja pengurus HME UNSRAT untuk menyusun program kerja periode 2024-2025.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <small class="text-muted">Februari 2024</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100">
+            <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Kunjungan+Industri" class="card-img-top" alt="Kunjungan Industri">
+            <div class="card-body">
+              <h5 class="card-title">Kunjungan Industri</h5>
+              <p class="card-text">Kunjungan ke PT Teknologi Indonesia untuk mempelajari penerapan teknologi di industri.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <small class="text-muted">Maret 2024</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="galeri.html" class="btn btn-primary px-4">Lihat Semua Galeri</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="card border-0 shadow p-4 bg-blue text-white">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h3 class="mb-3">Tertarik Bergabung dengan Kepengurusan?</h3>
+                <p class="mb-lg-0">Kembangkan potensi kepemimpinan dan organisasimu bersama HME UNSRAT. Ikuti rekrutmen pengurus yang diadakan setiap awal periode kepengurusan.</p>
+              </div>
+              <div class="col-lg-4 text-lg-end">
+                <a href="kontak.html" class="btn btn-light btn-lg px-4">Hubungi Kami</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" width="50" height="50" class="me-2">
+            <h5 class="mb-0">HME UNSRAT</h5>
+          </div>
+          <p>Himpunan Mahasiswa Teknik Elektro<br>Fakultas Teknik Universitas Sam Ratulangi</p>
+          <div class="social-icons mt-3">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="mb-3">Tautan</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="kepengurusan.html">Kepengurusan</a></li>
+            <li><a href="kegiatan.html">Kegiatan</a></li>
+            <li><a href="prestasi.html">Prestasi</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-4">
+          <h5 class="mb-3">Informasi</h5>
+          <ul class="list-unstyled">
+            <li><a href="galeri.html">Galeri</a></li>
+            <li><a href="berita.html">Berita</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <h5 class="mb-3">Berlangganan</h5>
+          <p>Dapatkan informasi terbaru dari HME</p>
+          <form class="mt-3">
+            <div class="input-group mb-3">
+              <input type="email" class="form-control" placeholder="Email anda" aria-label="Email anda">
+              <button class="btn btn-danger" type="submit">Langganan</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <hr class="my-4 bg-light opacity-25">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="mb-0">&copy; 2025 HME UNSRAT. All rights reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-0">Designed with <i class="bi bi-heart-fill text-danger"></i> by HME IT Team</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Initialize tooltips
+    document.addEventListener('DOMContentLoaded', function() {
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+      });
+      
+      // Hamburger menu animation
+      const hamburger = document.getElementById('hamburgerMenu');
+      if (hamburger) {
+        hamburger.addEventListener('click', function() {
+          this.classList.toggle('active');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
