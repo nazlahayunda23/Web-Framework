@@ -6,18 +6,18 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta name="description" content="Galeri kegiatan Himpunan Mahasiswa Teknik Elektro Universitas Sam Ratulangi" />
     <title>Galeri - HME Universitas Sam Ratulangi</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="galeri.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow"s>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="/">
-          <img alt="HME Logo" class="d-inline-block align-top" height="40" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" width="40" />
-          <span class="ms-2">HME UNSRAT</span>
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" width="40" height="40" class="d-inline-block align-top">
+          <span>HME UNSRAT</span>
         </a>
-
-        <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler border-0 p-0" data-bs-target="#navbarNav" data-bs-toggle="collapse" id="hamburgerMenu" type="button">
+        
+        <button id="hamburgerMenu" class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <div class="hamburger-icon">
             <span></span>
             <span></span>
@@ -28,60 +28,59 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a href="/" class="nav-link">
                 <i class="bi bi-house-door d-none d-md-inline me-1"></i>
                 Beranda
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="profil.html">
+              <a href="../profil/profil.html" class="nav-link">
                 <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
                 Profil
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kepengurusan.html">
+              <a href="../kepengurusan/kepengurusan.html" class="nav-link">
                 <i class="bi bi-people d-none d-md-inline me-1"></i>
                 Kepengurusan
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kegiatan.html">
+              <a href="../kegiatan/kegiatan.html" class="nav-link">
                 <i class="bi bi-calendar-event d-none d-md-inline me-1"></i>
                 Kegiatan
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="prestasi.html">
+              <a href="../prestasi/prestasi.html" class="nav-link">
                 <i class="bi bi-trophy d-none d-md-inline me-1"></i>
                 Prestasi
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="galeri.html">
+              <a href="../galeri/galeri.html" class="nav-link active">
                 <i class="bi bi-images d-none d-md-inline me-1"></i>
                 Galeri
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="kontak.html">
+              <a href="../kontak/kontak.html" class="nav-link">
                 <i class="bi bi-envelope d-none d-md-inline me-1"></i>
                 Kontak
               </a>
             </li>
           </ul>
         </div>
+
       </div>
     </nav>
     
-    <!-- Hero Section -->
-    <section class="hero-gallery text-center">
-      <div class="container py-5">
-        <h1 class="display-4 fw-bold mb-3">Galeri HME</h1>
+    <header class="hero">
+      <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">Galeri HME UNSRAT</h1>
         <p class="lead mb-0">Dokumentasi kegiatan dan momen berharga Himpunan Mahasiswa Teknik Elektro Universitas Sam Ratulangi</p>
       </div>
-    </section>
-    <!-- Gallery Section -->
+    </header>
 
     <!-- Photo Albums Section -->
     <section class="py-5">
@@ -278,7 +277,8 @@
       </div>
     </div>
     <!-- Bootstrap 5 JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../scripts.js"></script>
     <!-- Gallery Script -->
     <script>
       // Gallery data

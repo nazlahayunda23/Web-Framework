@@ -5,320 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kepengurusan - Himpunan Mahasiswa Elektro UNSRAT</title>
   <meta name="description" content="Struktur kepengurusan Himpunan Mahasiswa Elektro Universitas Sam Ratulangi" />
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    :root {
-      --primary-color: #0d47a1;
-      --secondary-color: #c62828;
-    }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-    }
-    
-    .navbar {
-      background-color: var(--primary-color);
-    }
-    
-    .navbar-brand span {
-      font-weight: 600;
-      margin-left: 10px;
-    }
-    
-    .navbar-dark .navbar-nav .nav-link {
-      color: rgba(255, 255, 255, 0.85);
-      font-weight: 500;
-      padding: 0.5rem 1rem;
-      transition: all 0.3s ease;
-    }
-    
-    .navbar-dark .navbar-nav .nav-link:hover,
-    .navbar-dark .navbar-nav .nav-link.active {
-      color: #fff;
-    }
-    
-    .section-title {
-      position: relative;
-      text-align: center;
-      margin-bottom: 2.5rem;
-      font-weight: 700;
-    }
-    
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background-color: var(--primary-color);
-    }
-    
-    .page-header {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 4rem 0;
-      position: relative;
-    }
-    
-    .page-header::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 50px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='white' fill-opacity='1' d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z'%3E%3C/path%3E%3C/svg%3E");
-      background-size: cover;
-      background-position: center;
-    }
-    
-    .feature-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      margin: 0 auto 1.5rem;
-      color: white;
-      font-size: 1.75rem;
-    }
-    
-    .bg-red {
-      background-color: var(--secondary-color);
-    }
-    
-    .bg-blue {
-      background-color: var(--primary-color);
-    }
-    
-    .card {
-      border: none;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      border-radius: 10px;
-      overflow: hidden;
-    }
-    
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    footer {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 3rem 0 1.5rem;
-    }
-    
-    footer a {
-      color: rgba(255, 255, 255, 0.8);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    footer a:hover {
-      color: white;
-    }
-    
-    .social-icons a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      margin-right: 0.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .social-icons a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-    
-    /* Specific styles for kepengurusan page */
-    .org-chart {
-      position: relative;
-      margin-bottom: 3rem;
-    }
-    
-    .org-level {
-      margin-bottom: 2rem;
-      position: relative;
-    }
-    
-    .org-level::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      width: 2px;
-      height: 30px;
-      background-color: var(--primary-color);
-      transform: translateX(-50%);
-    }
-    
-    .org-level:last-child::after {
-      display: none;
-    }
-    
-    .org-box {
-      background-color: white;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      z-index: 1;
-    }
-    
-    .org-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    .org-box.primary {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    .org-box.secondary {
-      background-color: var(--secondary-color);
-      color: white;
-    }
-    
-    .org-connector {
-      position: absolute;
-      width: 2px;
-      background-color: var(--primary-color);
-    }
-    
-    .team-member-card {
-      height: 100%;
-      text-align: center;
-      padding: 2rem;
-    }
-    
-    .team-member-img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1.5rem;
-      border: 5px solid #f8f9fa;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-    
-    .team-member-social {
-      margin-top: 1rem;
-    }
-    
-    .team-member-social a {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      background-color: #f8f9fa;
-      border-radius: 50%;
-      margin: 0 0.25rem;
-      color: var(--primary-color);
-      transition: all 0.3s ease;
-    }
-    
-    .team-member-social a:hover {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    .team-member-position {
-      color: var(--primary-color);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    
-    .team-member-card.primary .team-member-position {
-      color: var(--secondary-color);
-    }
-    
-    .team-member-card.secondary .team-member-position {
-      color: var(--primary-color);
-    }
-    
-    .period-badge {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-weight: 600;
-      font-size: 0.875rem;
-    }
-    
-    .nav-pills .nav-link {
-      color: #495057;
-      background-color: #f8f9fa;
-      border-radius: 30px;
-      margin: 0 0.25rem;
-      padding: 0.75rem 1.5rem;
-      transition: all 0.3s ease;
-    }
-    
-    .nav-pills .nav-link.active {
-      background-color: var(--primary-color);
-      color: white;
-    }
-    
-    .nav-pills .nav-link:hover:not(.active) {
-      background-color: #e9ecef;
-    }
-    
-    .division-card {
-      height: 100%;
-      text-align: center;
-      padding: 2rem;
-    }
-    
-    .division-icon {
-      margin-bottom: 1.5rem;
-    }
-    
-    .division-members {
-      margin-top: 1rem;
-      text-align: left;
-    }
-    
-    .division-members ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    
-    .division-members li {
-      padding: 0.5rem 0;
-      border-bottom: 1px solid #f8f9fa;
-    }
-    
-    .division-members li:last-child {
-      border-bottom: none;
-    }
-  </style>
+  <link rel="stylesheet" href="kepengurusan.css" />
 </head>
 
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
     <div class="container">
-      <a href="index.html" class="navbar-brand d-flex align-items-center">
+      <a href="/" class="navbar-brand d-flex align-items-center">
         <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" width="40" height="40" class="d-inline-block align-top">
         <span>HME UNSRAT</span>
       </a>
@@ -334,54 +27,54 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
+            <a href="/" class="nav-link">
               <i class="bi bi-house-door d-none d-md-inline me-1"></i>
               Beranda
             </a>
           </li>
           <li class="nav-item">
-            <a href="profil.html" class="nav-link">
+            <a href="../profil/profil.html" class="nav-link">
               <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
               Profil
             </a>
           </li>
           <li class="nav-item">
-            <a href="kepengurusan.html" class="nav-link active">
+            <a href="../kepengurusan/kepengurusan.html" class="nav-link active">
               <i class="bi bi-people d-none d-md-inline me-1"></i>
               Kepengurusan
             </a>
           </li>
           <li class="nav-item">
-            <a href="kegiatan.html" class="nav-link">
+            <a href="../kegiatan/kegiatan.html" class="nav-link">
               <i class="bi bi-calendar-event d-none d-md-inline me-1"></i>
               Kegiatan
             </a>
           </li>
           <li class="nav-item">
-            <a href="prestasi.html" class="nav-link">
+            <a href="../prestasi/prestasi.html" class="nav-link">
               <i class="bi bi-trophy d-none d-md-inline me-1"></i>
               Prestasi
             </a>
           </li>
           <li class="nav-item">
-            <a href="galeri.html" class="nav-link">
+            <a href="../galeri/galeri.html" class="nav-link">
               <i class="bi bi-images d-none d-md-inline me-1"></i>
               Galeri
             </a>
           </li>
           <li class="nav-item">
-            <a href="kontak.html" class="nav-link">
+            <a href="../kontak/kontak.html" class="nav-link">
               <i class="bi bi-envelope d-none d-md-inline me-1"></i>
               Kontak
             </a>
           </li>
         </ul>
       </div>
+
     </div>
   </nav>
-
-  <!-- Page Header -->
-  <header class="page-header">
+  
+  <header class="hero">
     <div class="container text-center">
       <h1 class="display-4 fw-bold mb-3">Kepengurusan HME UNSRAT</h1>
       <p class="lead mb-0">Struktur organisasi dan pengurus Himpunan Mahasiswa Elektro periode 2024-2025</p>
@@ -393,7 +86,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="section-title">Periode Kepengurusan</h2>
+          <h2 class="team-section-title">Periode Kepengurusan</h2>
           <p class="mb-4">Pilih periode kepengurusan untuk melihat struktur organisasi dan pengurus HME UNSRAT</p>
           <ul class="nav nav-pills justify-content-center mb-5" id="periodTab" role="tablist">
             <li class="nav-item" role="presentation">
@@ -419,7 +112,7 @@
         <div class="tab-pane fade show active" id="period-2024" role="tabpanel" aria-labelledby="period-2024-tab">
           <div class="row justify-content-center">
             <div class="col-lg-10">
-              <h2 class="section-title">Struktur Organisasi</h2>
+              <h2 class="team-section-title">Struktur Organisasi</h2>
               <div class="period-badge">Periode 2024-2025</div>
               
               <div class="org-chart">
@@ -500,7 +193,7 @@
               <h3 class="h2 text-center mb-4 mt-5">Pengurus Inti</h3>
               <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                  <div class="card team-member-card">
+                  <div class="team-card team-member-card">
                     <img src="https://via.placeholder.com/300x300/0d47a1/ffffff?text=BS" class="team-member-img" alt="Lalisa Manoban">
                     <h4>Lalisa Manoban</h4>
                     <p class="team-member-position">Ketua HME</p>
@@ -513,7 +206,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  <div class="card team-member-card">
+                  <div class="team-card team-member-card">
                     <img src="https://via.placeholder.com/300x300/c62828/ffffff?text=SR" class="team-member-img" alt="Kim Jennie">
                     <h4>Kim Jennie</h4>
                     <p class="team-member-position">Wakil Ketua HME</p>
@@ -526,7 +219,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  <div class="card team-member-card">
+                  <div class="team-card team-member-card">
                     <img src="https://via.placeholder.com/300x300/0d47a1/ffffff?text=AW" class="team-member-img" alt="Kim Jisoo">
                     <h4>Kim Jisoo</h4>
                     <p class="team-member-position">Sekretaris</p>
@@ -539,7 +232,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  <div class="card team-member-card">
+                  <div class="team-card team-member-card">
                     <img src="https://via.placeholder.com/300x300/c62828/ffffff?text=DL" class="team-member-img" alt="Park Chae Young">
                     <h4>Park Chae Young</h4>
                     <p class="team-member-position">Bendahara</p>
@@ -557,7 +250,7 @@
               <h3 class="h2 text-center mb-4 mt-5">Koordinator Bidang</h3>
               <div class="row g-4">
                 <div class="col-lg-3 col-md-6">
-                  <div class="card division-card">
+                  <div class="team-card division-card">
                     <div class="feature-icon bg-blue division-icon">
                       <i class="bi bi-mortarboard-fill"></i>
                     </div>
@@ -576,7 +269,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  <div class="card division-card">
+                  <div class="team-card division-card">
                     <div class="feature-icon bg-red division-icon">
                       <i class="bi bi-stars"></i>
                     </div>
@@ -595,7 +288,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  <div class="card division-card">
+                  <div class="team-card division-card">
                     <div class="feature-icon bg-blue division-icon">
                       <i class="bi bi-megaphone-fill"></i>
                     </div>
@@ -614,7 +307,7 @@
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                  <div class="card division-card">
+                  <div class="team-card division-card">
                     <div class="feature-icon bg-red division-icon">
                       <i class="bi bi-heart-fill"></i>
                     </div>
@@ -641,7 +334,7 @@
         <div class="tab-pane fade" id="period-2023" role="tabpanel" aria-labelledby="period-2023-tab">
           <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-              <h2 class="section-title">Struktur Organisasi</h2>
+              <h2 class="team-section-title">Struktur Organisasi</h2>
               <div class="period-badge">Periode 2023-2024</div>
               
               <div class="alert alert-info p-4 mb-5">
@@ -658,7 +351,7 @@
         <div class="tab-pane fade" id="period-2022" role="tabpanel" aria-labelledby="period-2022-tab">
           <div class="row justify-content-center">
             <div class="col-lg-10 text-center">
-              <h2 class="section-title">Struktur Organisasi</h2>
+              <h2 class="team-section-title">Struktur Organisasi</h2>
               <div class="period-badge">Periode 2022-2023</div>
               
               <div class="alert alert-info p-4 mb-5">
@@ -677,11 +370,11 @@
   <!-- Program Kerja -->
   <section class="py-5">
     <div class="container">
-      <h2 class="section-title">Program Kerja</h2>
+      <h2 class="team-section-title">Program Kerja</h2>
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="card border-0 shadow mb-4">
-            <div class="card-body p-4">
+          <div class="team-card border-0 shadow mb-4">
+            <div class="team-card-body p-4">
               <h3 class="h4 mb-3">Program Kerja Periode 2024-2025</h3>
               <p>Berikut adalah program kerja utama HME UNSRAT untuk periode kepengurusan 2024-2025:</p>
               
@@ -861,40 +554,40 @@
   <!-- Galeri Kegiatan -->
   <section class="py-5 bg-light">
     <div class="container">
-      <h2 class="section-title">Galeri Kegiatan</h2>
+      <h2 class="team-section-title">Galeri Kegiatan</h2>
       <div class="row g-4">
         <div class="col-lg-4 col-md-6">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Pelantikan+Pengurus" class="card-img-top" alt="Pelantikan Pengurus">
-            <div class="card-body">
-              <h5 class="card-title">Pelantikan Pengurus</h5>
-              <p class="card-text">Pelantikan pengurus HME UNSRAT periode 2024-2025 yang dihadiri oleh Dekan Fakultas Teknik.</p>
+          <div class="team-card h-100">
+            <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Pelantikan+Pengurus" class="team-card-img-top" alt="Pelantikan Pengurus">
+            <div class="team-card-body">
+              <h5 class="team-card-title">Pelantikan Pengurus</h5>
+              <p class="team-card-text">Pelantikan pengurus HME UNSRAT periode 2024-2025 yang dihadiri oleh Dekan Fakultas Teknik.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
+            <div class="team-card-footer bg-transparent border-0">
               <small class="text-muted">Januari 2024</small>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Rapat+Kerja" class="card-img-top" alt="Rapat Kerja">
-            <div class="card-body">
-              <h5 class="card-title">Rapat Kerja</h5>
-              <p class="card-text">Rapat kerja pengurus HME UNSRAT untuk menyusun program kerja periode 2024-2025.</p>
+          <div class="team-card h-100">
+            <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Rapat+Kerja" class="team-card-img-top" alt="Rapat Kerja">
+            <div class="team-card-body">
+              <h5 class="team-card-title">Rapat Kerja</h5>
+              <p class="team-card-text">Rapat kerja pengurus HME UNSRAT untuk menyusun program kerja periode 2024-2025.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
+            <div class="team-card-footer bg-transparent border-0">
               <small class="text-muted">Februari 2024</small>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6">
-          <div class="card h-100">
-            <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Kunjungan+Industri" class="card-img-top" alt="Kunjungan Industri">
-            <div class="card-body">
-              <h5 class="card-title">Kunjungan Industri</h5>
-              <p class="card-text">Kunjungan ke PT Teknologi Indonesia untuk mempelajari penerapan teknologi di industri.</p>
+          <div class="team-card h-100">
+            <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Kunjungan+Industri" class="team-card-img-top" alt="Kunjungan Industri">
+            <div class="team-card-body">
+              <h5 class="team-card-title">Kunjungan Industri</h5>
+              <p class="team-card-text">Kunjungan ke PT Teknologi Indonesia untuk mempelajari penerapan teknologi di industri.</p>
             </div>
-            <div class="card-footer bg-transparent border-0">
+            <div class="team-card-footer bg-transparent border-0">
               <small class="text-muted">Maret 2024</small>
             </div>
           </div>
@@ -911,7 +604,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="card border-0 shadow p-4 bg-blue text-white">
+          <div class="team-card border-0 shadow p-4 bg-blue text-white">
             <div class="row align-items-center">
               <div class="col-lg-8">
                 <h3 class="mb-3">Tertarik Bergabung dengan Kepengurusan?</h3>
@@ -937,7 +630,7 @@
             <h5 class="mb-0">HME UNSRAT</h5>
           </div>
           <p>Himpunan Mahasiswa Teknik Elektro<br>Fakultas Teknik Universitas Sam Ratulangi</p>
-          <div class="social-icons mt-3">
+          <div class="team-social-icons mt-3">
             <a href="#"><i class="bi bi-facebook"></i></a>
             <a href="#"><i class="bi bi-instagram"></i></a>
             <a href="#"><i class="bi bi-twitter"></i></a>
@@ -987,25 +680,7 @@
       </div>
     </div>
   </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Initialize tooltips
-    document.addEventListener('DOMContentLoaded', function() {
-      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl)
-      });
-      
-      // Hamburger menu animation
-      const hamburger = document.getElementById('hamburgerMenu');
-      if (hamburger) {
-        hamburger.addEventListener('click', function() {
-          this.classList.toggle('active');
-        });
-      }
-    });
-  </script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts.js"></script>
 </body>
 </html>
