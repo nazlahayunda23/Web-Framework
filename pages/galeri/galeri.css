@@ -1,0 +1,75 @@
+@import '../css/main.css';
+
+/* Additional Gallery Styles */
+:root {
+  --primary-color: #0d47a1;
+  --secondary-color: #c62828;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.hero {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='white' fill-opacity='1' d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-item {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  transition: transform 0.5s ease;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item .card-img-overlay {
+  opacity: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.category-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.filter-btn.active {
+  background-color: #0d47a1 !important;
+  color: white !important;
+}

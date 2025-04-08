@@ -1,0 +1,265 @@
+@import '../../css/main.css';
+
+:root {
+  --primary-color: #0d47a1;
+  --secondary-color: #c62828;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.team-section-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.team-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+.hero {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 100'%3E%3Cpath fill='white' fill-opacity='1' d='M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,100L1360,100C1280,100,1120,100,960,100C800,100,640,100,480,100C320,100,160,100,80,100L0,100Z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  background-position: center;
+}
+
+.team-feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.bg-red {
+  background-color: var(--secondary-color);
+}
+
+.bg-blue {
+  background-color: var(--primary-color);
+}
+
+.team-card {
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.team-social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.team-social-icons a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Specific styles for kepengurusan page */
+.org-chart {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.org-level {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.org-level::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 2px;
+  height: 30px;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+}
+
+.org-level:last-child::after {
+  display: none;
+}
+
+.org-box {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.org-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.org-box.primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.org-box.secondary {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.org-connector {
+  position: absolute;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+.team-member-card {
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.team-member-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1.5rem;
+  border: 5px solid #f8f9fa;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-member-social {
+  margin-top: 1rem;
+}
+
+.team-member-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #f8f9fa;
+  border-radius: 50%;
+  margin: 0 0.25rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.team-member-social a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.team-member-position {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.team-member-card.primary .team-member-position {
+  color: var(--secondary-color);
+}
+
+.team-member-card.secondary .team-member-position {
+  color: var(--primary-color);
+}
+
+.period-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.nav-pills .nav-link {
+  color: #495057;
+  background-color: #f8f9fa;
+  border-radius: 30px;
+  margin: 0 0.25rem;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: #e9ecef;
+}
+
+.division-card {
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+}
+
+.division-icon {
+  margin-bottom: 1.5rem;
+}
+
+.division-members {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.division-members ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.division-members li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f8f9fa;
+}
+
+.division-members li:last-child {
+  border-bottom: none;
+}
