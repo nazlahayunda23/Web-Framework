@@ -93,7 +93,7 @@ body {
   transform: rotate(-135deg);
 }
 
-/* Hero Section */
+/* Hero Section on Index Page */
 .hero-section {
   background: linear-gradient(135deg, #0d47a1 0%, #c01515 100%);
   color: white;
