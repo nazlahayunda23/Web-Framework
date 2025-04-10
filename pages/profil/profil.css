@@ -133,11 +133,6 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.profile-img {
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
 .value-profile-card {
   height: 100%;
   text-align: center;
@@ -160,7 +155,6 @@ body {
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
-  background-color: white;
   position: relative;
 }
 
@@ -186,4 +180,33 @@ body {
   background-color: #f8f9fa;
   border-radius: 10px;
   padding: 2rem;
+}
+
+.scroll-wrapper {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-bottom: 1rem;
+}
+
+.scroll-container {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.scroll-item {
+  min-width: 250px;
+  flex: 0 0 auto;
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.scroll-wrapper::-webkit-scrollbar-track {
+  background: transparent;
 }

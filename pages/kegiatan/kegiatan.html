@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kegiatan - HME Universitas Sam Ratulangi</title>
+    <meta name="description" content="Kegiatan dan acara Himpunan Mahasiswa Elektro Universitas Sam Ratulangi" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow">
+      <div class="container">
+        <a href="/" class="navbar-brand d-flex align-items-center">
+          <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" class="d-inline-block align-top">
+          <span>HME UNSRAT</span>
+        </a>
+        
+        <button id="hamburgerMenu" class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="bi bi-house-door d-none d-md-inline me-1"></i>
+                Beranda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="profil.html" class="nav-link">
+                <i class="bi bi-info-circle d-none d-md-inline me-1"></i>
+                Profil
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="kepengurusan.html" class="nav-link">
+                <i class="bi bi-people d-none d-md-inline me-1"></i>
+                Kepengurusan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="kegiatan.html" class="nav-link active">
+                <i class="bi bi-calendar-event d-none d-md-inline me-1"></i>
+                Kegiatan
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="prestasi.html" class="nav-link">
+                <i class="bi bi-trophy d-none d-md-inline me-1"></i>
+                Prestasi
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="galeri.html" class="nav-link">
+                <i class="bi bi-images d-none d-md-inline me-1"></i>
+                Galeri
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="kontak.html" class="nav-link">
+                <i class="bi bi-envelope d-none d-md-inline me-1"></i>
+                Kontak
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <!-- Hero Section -->
+    <section class="hero-gallery text-center">
+      <div class="container py-5">
+        <h1 class="display-4 fw-bold mb-3">Kegiatan HME</h1>
+        <p class="lead mb-0">Berbagai kegiatan akademik, kompetisi, dan pengabdian masyarakat Himpunan Mahasiswa Teknik Elektro Universitas Sam Ratulangi</p>
+      </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Kegiatan Mendatang</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="https://via.placeholder.com/600x800/c62828/ffffff?text=Elektro+Competition" class="img-fluid rounded-start h-100 object-fit-cover" alt="Elektro Competition 2025">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body d-flex flex-column h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-red">Kompetisi</span>
+                      <small class="text-muted">10-15 Mei 2025</small>
+                    </div>
+                    <h3 class="card-title h4">Elektro Competition 2025</h3>
+                    <p class="card-text">Kompetisi tahunan bidang teknik elektro tingkat nasional dengan berbagai kategori lomba termasuk desain PCB, pemrograman mikrokontroler, dan inovasi teknologi.</p>
+                    <div class="mt-auto">
+                      <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+                        <span>Auditorium Fakultas Teknik UNSRAT</span>
+                      </div>
+                      <a href="#" class="btn btn-danger">Daftar Sekarang</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="https://via.placeholder.com/600x800/0d47a1/ffffff?text=Workshop+IoT" class="img-fluid rounded-start h-100 object-fit-cover" alt="Workshop IoT">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body d-flex flex-column h-100">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-blue">Workshop</span>
+                      <small class="text-muted">22 April 2025</small>
+                    </div>
+                    <h3 class="card-title h4">Workshop Internet of Things</h3>
+                    <p class="card-text">Workshop pemrograman dan implementasi Internet of Things (IoT) menggunakan ESP32 dan platform cloud untuk mahasiswa Teknik Elektro.</p>
+                    <div class="mt-auto">
+                      <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                        <span>Laboratorium Komputer Teknik Elektro</span>
+                      </div>
+                      <a href="#" class="btn btn-primary">Daftar Sekarang</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Categories Section -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="section-title">Kategori Kegiatan</h2>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="card h-100 text-center border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-red mb-3">
+                  <i class="bi bi-mortarboard-fill"></i>
+                </div>
+                <h3 class="h5 mb-3">Akademik</h3>
+                <p class="card-text">Seminar, workshop, dan pelatihan untuk meningkatkan kemampuan akademik mahasiswa.</p>
+                <a href="#akademik" class="btn btn-sm btn-outline-danger mt-3">Lihat Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card h-100 text-center border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-blue mb-3">
+                  <i class="bi bi-trophy-fill"></i>
+                </div>
+                <h3 class="h5 mb-3">Kompetisi</h3>
+                <p class="card-text">Berbagai kompetisi di bidang teknik elektro baik tingkat lokal maupun nasional.</p>
+                <a href="#kompetisi" class="btn btn-sm btn-outline-primary mt-3">Lihat Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card h-100 text-center border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-red mb-3">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <h3 class="h5 mb-3">Pengabdian</h3>
+                <p class="card-text">Kegiatan pengabdian masyarakat dan penerapan ilmu teknik elektro di masyarakat.</p>
+                <a href="#pengabdian" class="btn btn-sm btn-outline-danger mt-3">Lihat Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="card h-100 text-center border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="feature-icon bg-blue mb-3">
+                  <i class="bi bi-stars"></i>
+                </div>
+                <h3 class="h5 mb-3">Keorganisasian</h3>
+                <p class="card-text">Kegiatan internal organisasi seperti rapat, musyawarah, dan kegiatan keakraban.</p>
+                <a href="#keorganisasian" class="btn btn-sm btn-outline-primary mt-3">Lihat Kegiatan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Events Section -->
+    <section id="akademik" class="py-5 bg-light">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Kegiatan Akademik</h2>
+          <div class="dropdown">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Semua</a></li>
+              <li><a class="dropdown-item" href="#">Seminar</a></li>
+              <li><a class="dropdown-item" href="#">Workshop</a></li>
+              <li><a class="dropdown-item" href="#">Pelatihan</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Seminar+Nasional" class="card-img-top" alt="Seminar Nasional Energi Terbarukan">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-red">Seminar</span>
+                  <small class="text-muted">22 April 2025</small>
+                </div>
+                <h5 class="card-title">Seminar Nasional Energi Terbarukan</h5>
+                <p class="card-text">Seminar nasional membahas perkembangan dan implementasi energi terbarukan di Indonesia dengan pembicara dari kementerian ESDM dan praktisi industri.</p>
+                <a href="#" class="btn btn-sm btn-outline-danger">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Workshop+Robotika" class="card-img-top" alt="Workshop Robotika">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Workshop</span>
+                  <small class="text-muted">15 Maret 2025</small>
+                </div>
+                <h5 class="card-title">Workshop Robotika</h5>
+                <p class="card-text">Workshop pemrograman dan pembuatan robot dengan Arduino untuk mahasiswa Teknik Elektro dengan materi dasar hingga lanjutan.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Pelatihan+PCB" class="card-img-top" alt="Pelatihan Desain PCB">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-red">Pelatihan</span>
+                  <small class="text-muted">5 Februari 2025</small>
+                </div>
+                <h5 class="card-title">Pelatihan Desain PCB</h5>
+                <p class="card-text">Pelatihan desain PCB menggunakan software Eagle dan KiCad dengan output berupa proyek PCB yang diproduksi untuk setiap peserta.</p>
+                <a href="#" class="btn btn-sm btn-outline-danger">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-danger px-4">Lihat Semua Kegiatan Akademik</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Competition Events Section -->
+    <section id="kompetisi" class="py-5">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h2 class="section-title mb-0">Kompetisi</h2>
+          <div class="dropdown">
+            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+              <li><a class="dropdown-item" href="#">Semua</a></li>
+              <li><a class="dropdown-item" href="#">Tingkat Lokal</a></li>
+              <li><a class="dropdown-item" href="#">Tingkat Nasional</a></li>
+              <li><a class="dropdown-item" href="#">Tingkat Internasional</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Kompetisi+Elektro" class="card-img-top" alt="Elektro Competition 2025">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Nasional</span>
+                  <small class="text-muted">10-15 Mei 2025</small>
+                </div>
+                <h5 class="card-title">Elektro Competition 2025</h5>
+                <p class="card-text">Kompetisi tahunan bidang teknik elektro tingkat nasional dengan berbagai kategori lomba termasuk desain PCB, pemrograman mikrokontroler, dan inovasi teknologi.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kompetisi</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Lomba+Karya+Tulis" class="card-img-top" alt="Lomba Karya Tulis Ilmiah">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-red">Nasional</span>
+                  <small class="text-muted">20 Juni 2025</small>
+                </div>
+                <h5 class="card-title">Lomba Karya Tulis Ilmiah</h5>
+                <p class="card-text">Lomba karya tulis ilmiah dengan tema "Inovasi Teknologi untuk Energi Terbarukan" yang diikuti oleh mahasiswa dari seluruh Indonesia.</p>
+                <a href="#" class="btn btn-sm btn-outline-danger">Detail Kompetisi</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Kompetisi+Robot" class="card-img-top" alt="Kompetisi Robot Nasional">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Nasional</span>
+                  <small class="text-muted">15 Juli 2025</small>
+                </div>
+                <h5 class="card-title">Kompetisi Robot Nasional</h5>
+                <p class="card-text">Kompetisi robot tingkat nasional dengan kategori robot pemadam api, robot pengikut garis, dan robot humanoid yang diselenggarakan oleh Kemenristekdikti.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kompetisi</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-primary px-4">Lihat Semua Kompetisi</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community Service Section -->
+    <section id="pengabdian" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Pengabdian Masyarakat</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="https://via.placeholder.com/600x800/c62828/ffffff?text=Elektrifikasi+Desa" class="img-fluid rounded-start h-100 object-fit-cover" alt="Elektrifikasi Desa Terpencil">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-red">Pengabdian</span>
+                      <small class="text-muted">12 Agustus 2025</small>
+                    </div>
+                    <h3 class="card-title h5">Elektrifikasi Desa Terpencil</h3>
+                    <p class="card-text">Program elektrifikasi desa terpencil menggunakan panel surya untuk masyarakat yang belum terjangkau listrik PLN di daerah pedalaman Sulawesi Utara.</p>
+                    <a href="#" class="btn btn-sm btn-outline-danger mt-2">Detail Kegiatan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-5">
+                  <img src="https://via.placeholder.com/600x800/0d47a1/ffffff?text=Pelatihan+Komputer" class="img-fluid rounded-start h-100 object-fit-cover" alt="Pelatihan Komputer untuk Siswa SMA">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                      <span class="badge bg-blue">Pengabdian</span>
+                      <small class="text-muted">25 September 2025</small>
+                    </div>
+                    <h3 class="card-title h5">Pelatihan Komputer untuk Siswa SMA</h3>
+                    <p class="card-text">Program pelatihan komputer dan dasar-dasar pemrograman untuk siswa SMA di daerah pinggiran kota Manado untuk meningkatkan literasi digital.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Detail Kegiatan</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-danger px-4">Lihat Semua Kegiatan Pengabdian</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Organizational Events Section -->
+    <section id="keorganisasian" class="py-5">
+      <div class="container">
+        <h2 class="section-title">Kegiatan Keorganisasian</h2>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Musyawarah+Besar" class="card-img-top" alt="Musyawarah Besar HME">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Internal</span>
+                  <small class="text-muted">5 Januari 2025</small>
+                </div>
+                <h5 class="card-title">Musyawarah Besar HME</h5>
+                <p class="card-text">Musyawarah besar tahunan untuk evaluasi program kerja dan pemilihan ketua HME periode berikutnya.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/c62828/ffffff?text=Makrab" class="card-img-top" alt="Malam Keakraban">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-red">Internal</span>
+                  <small class="text-muted">20 Februari 2025</small>
+                </div>
+                <h5 class="card-title">Malam Keakraban (MAKRAB)</h5>
+                <p class="card-text">Kegiatan malam keakraban untuk meningkatkan kekompakan dan kerjasama antar pengurus HME.</p>
+                <a href="#" class="btn btn-sm btn-outline-danger">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <img src="https://via.placeholder.com/600x400/0d47a1/ffffff?text=Rapat+Kerja" class="card-img-top" alt="Rapat Kerja Pengurus">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <span class="badge bg-blue">Internal</span>
+                  <small class="text-muted">15 Maret 2025</small>
+                </div>
+                <h5 class="card-title">Rapat Kerja Pengurus</h5>
+                <p class="card-text">Rapat kerja pengurus HME untuk menyusun program kerja dan anggaran kegiatan selama satu periode kepengurusan.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Detail Kegiatan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-primary px-4">Lihat Semua Kegiatan Keorganisasian</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calendar Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Kalender Kegiatan</h2>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4">
+                <div class="row mb-4">
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-center">
+                      <h4 class="mb-0">April 2025</h4>
+                      <div class="ms-3">
+                        <button class="btn btn-sm btn-outline-primary me-2">
+                          <i class="bi bi-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-sm btn-outline-primary">
+                          <i class="bi bi-chevron-right"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 text-md-end mt-3 mt-md-0">
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn btn-outline-primary active">Bulan</button>
+                      <button type="button" class="btn btn-outline-primary">Minggu</button>
+                      <button type="button" class="btn btn-outline-primary">Hari</button>
+                    </div>
+                  </div>
+                </div>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr class="text-center">
+                      <th>Minggu</th>
+                      <th>Senin</th>
+                      <th>Selasa</th>
+                      <th>Rabu</th>
+                      <th>Kamis</th>
+                      <th>Jumat</th>
+                      <th>Sabtu</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="text-center">
+                      <td class="text-muted">30</td>
+                      <td class="text-muted">31</td>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                      <td>10</td>
+                      <td>11</td>
+                      <td>12</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>13</td>
+                      <td>14</td>
+                      <td>15</td>
+                      <td>16</td>
+                      <td>17</td>
+                      <td>18</td>
+                      <td>19</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>20</td>
+                      <td>21</td>
+                      <td class="bg-primary text-white">22</td>
+                      <td>23</td>
+                      <td>24</td>
+                      <td>25</td>
+                      <td>26</td>
+                    </tr>
+                    <tr class="text-center">
+                      <td>27</td>
+                      <td>28</td>
+                      <td>29</td>
+                      <td>30</td>
+                      <td class="text-muted">1</td>
+                      <td class="text-muted">2</td>
+                      <td class="text-muted">3</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="mt-4">
+                  <h5>Kegiatan Bulan Ini:</h5>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="badge bg-primary me-2">22 April</span>
+                        Seminar Nasional Energi Terbarukan
+                      </div>
+                      <a href="#" class="btn btn-sm btn-outline-primary">Detail</a>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="badge bg-danger me-2">22 April</span>
+                        Workshop Internet of Things
+                      </div>
+                      <a href="#" class="btn btn-sm btn-outline-danger">Detail</a>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                      <div>
+                        <span class="badge bg-primary me-2">28 April</span>
+                        Rapat Persiapan Elektro Competition
+                      </div>
+                      <a href="#" class="btn btn-sm btn-outline-primary">Detail</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Event Registration Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card border-0 shadow-sm">
+              <div class="card-body p-4 p-md-5">
+                <h2 class="text-center mb-4">Daftar Kegiatan</h2>
+                <p class="text-center mb-4">Ingin berpartisipasi dalam kegiatan HME? Isi formulir di bawah ini untuk mendapatkan informasi terbaru tentang kegiatan yang akan datang.</p>
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="nama" class="form-label">Nama Lengkap</label>
+                      <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Masukkan email">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="telepon" class="form-label">Nomor Telepon</label>
+                      <input type="tel" class="form-control" id="telepon" placeholder="Masukkan nomor telepon">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="institusi" class="form-label">Institusi</label>
+                      <input type="text" class="form-control" id="institusi" placeholder="Masukkan institusi">
+                    </div>
+                    <div class="col-12">
+                      <label for="kegiatan" class="form-label">Kegiatan yang Diminati</label>
+                      <select class="form-select" id="kegiatan">
+                        <option selected disabled>Pilih kegiatan</option>
+                        <option>Seminar Nasional Energi Terbarukan</option>
+                        <option>Workshop Internet of Things</option>
+                        <option>Elektro Competition 2025</option>
+                        <option>Pelatihan Desain PCB</option>
+                        <option>Lomba Karya Tulis Ilmiah</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <label for="pesan" class="form-label">Pesan (Opsional)</label>
+                      <textarea class="form-control" id="pesan" rows="3" placeholder="Tulis pesan atau pertanyaan anda"></textarea>
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter">
+                        <label class="form-check-label" for="newsletter">
+                          Saya ingin menerima informasi terbaru tentang kegiatan HME UNSRAT
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-12 text-center">
+                      <button type="submit" class="btn btn-primary px-5 py-2">Daftar Sekarang</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="section-title">Pertanyaan Umum</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Bagaimana cara mendaftar kegiatan HME?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Untuk mendaftar kegiatan HME, Anda dapat mengisi formulir pendaftaran yang tersedia di website ini atau menghubungi panitia melalui kontak yang tertera pada detail kegiatan. Setiap kegiatan memiliki prosedur pendaftaran yang mungkin berbeda, jadi pastikan untuk membaca detail kegiatan dengan seksama.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Apakah kegiatan HME terbuka untuk umum?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Sebagian besar kegiatan HME seperti seminar, workshop, dan kompetisi terbuka untuk umum. Namun, beberapa kegiatan mungkin dikhususkan untuk mahasiswa Teknik Elektro atau mahasiswa UNSRAT. Informasi mengenai target peserta akan dicantumkan pada detail kegiatan.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Apakah ada biaya untuk mengikuti kegiatan HME?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Beberapa kegiatan HME bersifat gratis, sementara yang lain mungkin memerlukan biaya pendaftaran. Biaya ini biasanya digunakan untuk keperluan operasional kegiatan, sertifikat, konsumsi, dan materi. Informasi mengenai biaya pendaftaran akan dicantumkan pada detail kegiatan.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3 shadow-sm">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Bagaimana cara mendapatkan sertifikat kegiatan?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Sertifikat kegiatan biasanya diberikan kepada peserta yang telah mengikuti kegiatan sesuai dengan ketentuan yang berlaku. Sertifikat dapat diberikan dalam bentuk fisik pada akhir kegiatan atau dikirimkan melalui email dalam bentuk digital. Informasi mengenai sertifikat akan disampaikan oleh panitia pada saat kegiatan berlangsung.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 shadow-sm">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Bagaimana cara berkolaborasi atau menjadi sponsor kegiatan HME?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Untuk berkolaborasi atau menjadi sponsor kegiatan HME, Anda dapat menghubungi kami melalui email di <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0d64636b62234540484d6a606c6461236e6260">[email&#160;protected]</a> atau melalui halaman kontak di website ini. Tim kami akan menghubungi Anda untuk mendiskusikan detail kerjasama yang dapat dilakukan.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #0d47a1; color: white">
+      <div class="container">
+        <div class="row g-4 py-5">
+          <div class="col-lg-4">
+            <div class="d-flex align-items-center mb-3">
+              <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-ao2fy5D7HI6i3Q5JKBFYOnE8eBfcXR.png" alt="HME Logo" width="50" height="50" class="me-2">
+              <h5 class="mb-0">HME UNSRAT</h5>
+            </div>
+            <p>Himpunan Mahasiswa Teknik Elektro<br>Fakultas Teknik Universitas Sam Ratulangi</p>
+            <div class="social-icons mt-3">
+              <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="mb-3">Tautan</h5>
+            <ul class="list-unstyled">
+              <li><a href="/" class="text-white text-decoration-none mb-2 d-inline-block">Beranda</a></li>
+              <li><a href="profil.html" class="text-white text-decoration-none mb-2 d-inline-block">Profil</a></li>
+              <li><a href="/kepengurusan" class="text-white text-decoration-none mb-2 d-inline-block">Kepengurusan</a></li>
+              <li><a href="/kegiatan" class="text-white text-decoration-none mb-2 d-inline-block">Kegiatan</a></li>
+              <li><a href="/prestasi" class="text-white text-decoration-none mb-2 d-inline-block">Prestasi</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-4">
+            <h5 class="mb-3">Informasi</h5>
+            <ul class="list-unstyled">
+              <li><a href="/galeri" class="text-white text-decoration-none mb-2 d-inline-block">Galeri</a></li>
+              <li><a href="/berita" class="text-white text-decoration-none mb-2 d-inline-block">Berita</a></li>
+              <li><a href="/download" class="text-white text-decoration-none mb-2 d-inline-block">Download</a></li>
+              <li><a href="/faq" class="text-white text-decoration-none mb-2 d-inline-block">FAQ</a></li>
+              <li><a href="/kontak" class="text-white text-decoration-none mb-2 d-inline-block">Kontak</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-4">
+            <h5 class="mb-3">Berlangganan</h5>
+            <p>Dapatkan informasi terbaru dari HME</p>
+            <form class="mt-3">
+              <div class="input-group mb-3">
+                <input type="email" class="form-control" placeholder="Email anda" aria-label="Email anda">
+                <button class="btn btn-danger" type="submit">Langganan</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr class="my-4 bg-light opacity-25">
+        <div class="row pb-4">
+          <div class="col-md-6">
+            <p class="mb-0">&copy; 2025 HME UNSRAT. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="mb-0">Designed with <i class="bi bi-heart-fill text-danger"></i> by HME IT Team</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
