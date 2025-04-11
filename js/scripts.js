@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Tambahkan kelas 'active' ke link halaman saat ini
   navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentLocation) {
+    if (link.pathname === currentLocation) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
